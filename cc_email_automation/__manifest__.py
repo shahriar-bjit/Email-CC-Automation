@@ -18,6 +18,9 @@
         'views/inherited_stock_picking_view.xml',
         'views/inherited_res_config_settings_views.xml',
     ],
+    'images': [
+        'static/description/banner.png',
+    ],
     'installable': True,
     'application': False,
     'auto_install': False,
