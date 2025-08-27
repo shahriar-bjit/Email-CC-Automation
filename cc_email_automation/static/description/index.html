@@ -247,26 +247,30 @@
 
 <!-- HERO: keep it minimal -->
 <!-- Colorful hero with ONLY icon + title (Apps-safe) -->
+<!-- COLORFUL HERO: icon + title only (Odoo Apps-safe: inline styles only) -->
 <header
         style="
-    position:relative;overflow:hidden;text-align:center;color:#fff;
-    padding:72px 18px;margin:0;
+    position:relative;overflow:hidden;text-align:center;color:#fff;margin:0;
+    padding:78px 18px;
     background:
-      radial-gradient(700px 280px at 85% -140px, rgba(255,255,255,.18), transparent 70%),
-      radial-gradient(560px 240px at 10% -120px, rgba(255,255,255,.12), transparent 70%),
-      repeating-linear-gradient(0deg,  rgba(255,255,255,.10) 0, rgba(255,255,255,.10) 1px, transparent 1px, transparent 44px),
-      repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0, rgba(255,255,255,.08) 1px, transparent 1px, transparent 44px),
+      radial-gradient(700px 280px at 85% -140px, rgba(255,255,255,.22), transparent 70%),
+      radial-gradient(560px 240px at 10% -120px, rgba(255,255,255,.14), transparent 70%),
+      repeating-linear-gradient(0deg,  rgba(255,255,255,.10) 0, rgba(255,255,255,.10) 1px, transparent 1px, transparent 46px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0, rgba(255,255,255,.08) 1px, transparent 1px, transparent 46px),
       linear-gradient(135deg,#1e40af,#2563eb);
   ">
     <div style="max-width:1180px;margin:0 auto">
+        <!-- floating, rounded panel to make the title pop -->
         <div
                 style="
-        display:inline-block;background:#ffffff;color:#111827;
-        padding:22px 28px;border-radius:18px;border:1px solid #e5e7eb;
-        box-shadow:0 12px 36px rgba(17,24,39,.18);
+        display:inline-block;background:rgba(255,255,255,.12);
+        padding:24px 34px;border-radius:22px;border:1px solid rgba(255,255,255,.35);
+        box-shadow:0 14px 44px rgba(0,0,0,.25);
+        backdrop-filter: blur(2px);
       ">
-            <img src="images/icon.png" alt="Email CC Automation" style="height:72px;width:auto;border-radius:14px">
-            <h1 style="font-size:48px;margin:12px 0 0">Email CC Automation</h1>
+            <img src="images/icon.png" alt="Email CC Automation"
+                 style="height:80px;width:auto;border-radius:16px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.35));margin-bottom:10px">
+            <h1 style="font-size:54px;margin:6px 0 0;letter-spacing:.2px">Email CC Automation</h1>
         </div>
     </div>
 </header>
