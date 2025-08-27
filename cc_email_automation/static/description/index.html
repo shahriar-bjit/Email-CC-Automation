@@ -314,32 +314,76 @@
 
 
 <!-- VALUE -->
-<section class="section">
-    <div class="wrap">
-        <h2>What it does</h2>
-        <p class="muted">This module auto-populates the <strong>CC</strong> field whenever users send operational emails
-            from Odoo (e.g., quotations, RFQs/POs, invoices/credit notes, and delivery confirmations). You can define a
-            global CC list or let the system fall back to responsible users - with the option to adjust on the fly in
-            the wizards.</p>
-        <div class="grid cards-3" style="margin-top:16px">
-            <div class="card">
-                <h3><span class="check">AUTO</span> Global CC Policy</h3>
-                <p>Configure a global list of CC partners (by email) from Settings. Applied platform-wide to supported
-                    flows.</p>
-            </div>
-            <div class="card">
-                <h3><span class="check">SMART</span> Sensible Fallbacks</h3>
-                <p>If no global list is set, CC falls back to the responsible user per document type (e.g., salesperson
-                    or purchaser).</p>
-            </div>
-            <div class="card">
-                <h3><span class="check">SAFE</span> Upgrade-Proof</h3>
-                <p>No email template overrides. CC is injected at runtime right before sending, keeping upgrades
-                    smooth.</p>
-            </div>
-        </div>
+<!-- “What it does” — 3 cards in one row (Apps-safe: inline styles only) -->
+<section style="padding:56px 0;background:#f7f8fa">
+  <div style="max-width:1180px;margin:0 auto;padding:0 18px">
+
+    <!-- light panel around the cards -->
+    <div style="background:#f3f4f6;border:1px solid #e5e7eb;border-radius:16px;
+                box-shadow:0 10px 30px rgba(17,24,39,.08);padding:26px">
+
+      <h2 style="font-size:42px;margin:0 0 18px;text-align:center">What it does</h2>
+      <p style="color:#4b5563;max-width:980px;margin:0 auto 18px;text-align:center">
+        This module auto-populates the <b>CC</b> field whenever users send operational emails
+        from Odoo (e.g., quotations, RFQs/POs, invoices/credit notes, and delivery confirmations).
+        You can define a global CC list or let the system fall back to responsible users — with the
+        option to adjust on the fly in the wizards.
+      </p>
+
+      <!-- 3 columns -->
+      <table width="100%" cellpadding="18" cellspacing="18" border="0" style="margin-top:6px">
+        <tr valign="top">
+          <!-- Card 1 -->
+          <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+                                  box-shadow:0 6px 18px rgba(17,24,39,.08);padding:18px">
+            <h3 style="margin:4px 0 8px;font-size:20px">
+              <span style="display:inline-block;margin-right:8px;background:#d1fae5;color:#065f46;
+                           border:1px solid #a7f3d0;border-radius:6px;padding:2px 6px;font-size:11px;font-weight:700">
+                AUTO
+              </span>
+              Global CC Policy
+            </h3>
+            <p style="color:#4b5563;margin:0">
+              Configure a global list of CC partners (by email) from Settings. Applied platform-wide to supported flows.
+            </p>
+          </td>
+
+          <!-- Card 2 -->
+          <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+                                  box-shadow:0 6px 18px rgba(17,24,39,.08);padding:18px">
+            <h3 style="margin:4px 0 8px;font-size:20px">
+              <span style="display:inline-block;margin-right:8px;background:#e0f2fe;color:#0c4a6e;
+                           border:1px solid #bae6fd;border-radius:6px;padding:2px 6px;font-size:11px;font-weight:700">
+                SMART
+              </span>
+              Sensible Fallbacks
+            </h3>
+            <p style="color:#4b5563;margin:0">
+              If no global list is set, CC falls back to the responsible user per document type (e.g., salesperson or purchaser).
+            </p>
+          </td>
+
+          <!-- Card 3 -->
+          <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+                                  box-shadow:0 6px 18px rgba(17,24,39,.08);padding:18px">
+            <h3 style="margin:4px 0 8px;font-size:20px">
+              <span style="display:inline-block;margin-right:8px;background:#ede9fe;color:#5b21b6;
+                           border:1px solid #ddd6fe;border-radius:6px;padding:2px 6px;font-size:11px;font-weight:700">
+                SAFE
+              </span>
+              Upgrade-Proof
+            </h3>
+            <p style="color:#4b5563;margin:0">
+              No email template overrides. CC is injected at runtime right before sending, keeping upgrades smooth.
+            </p>
+          </td>
+        </tr>
+      </table>
+
     </div>
+  </div>
 </section>
+
 
 <!-- COVERAGE -->
 <section class="section" style="padding-top:0">
