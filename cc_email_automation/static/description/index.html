@@ -316,129 +316,164 @@
 <!-- VALUE -->
 <!-- “What it does” — 3 cards in one row (Apps-safe: inline styles only) -->
 <section style="padding:56px 0;background:#f7f8fa">
-  <div style="max-width:1180px;margin:0 auto;padding:0 18px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 18px">
 
-    <!-- light panel around the cards -->
-    <div style="background:#f3f4f6;border:1px solid #e5e7eb;border-radius:16px;
+        <!-- light panel around the cards -->
+        <div style="background:#f3f4f6;border:1px solid #e5e7eb;border-radius:16px;
                 box-shadow:0 10px 30px rgba(17,24,39,.08);padding:26px">
 
-      <h2 style="font-size:42px;margin:0 0 18px;text-align:center">What it does</h2>
-      <p style="color:#4b5563;max-width:980px;margin:0 auto 18px;text-align:center">
-        This module auto-populates the <b>CC</b> field whenever users send operational emails
-        from Odoo (e.g., quotations, RFQs/POs, invoices/credit notes, and delivery confirmations).
-        You can define a global CC list or let the system fall back to responsible users — with the
-        option to adjust on the fly in the wizards.
-      </p>
+            <h2 style="font-size:42px;margin:0 0 18px;text-align:center">What it does</h2>
+            <p style="color:#4b5563;max-width:980px;margin:0 auto 18px;text-align:center">
+                This module auto-populates the <b>CC</b> field whenever users send operational emails
+                from Odoo (e.g., quotations, RFQs/POs, invoices/credit notes, and delivery confirmations).
+                You can define a global CC list or let the system fall back to responsible users — with the
+                option to adjust on the fly in the wizards.
+            </p>
 
-      <!-- 3 columns -->
-      <table width="100%" cellpadding="18" cellspacing="18" border="0" style="margin-top:6px">
-        <tr valign="top">
-          <!-- Card 1 -->
-          <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+            <!-- 3 columns -->
+            <table width="100%" cellpadding="18" cellspacing="18" border="0" style="margin-top:6px">
+                <tr valign="top">
+                    <!-- Card 1 -->
+                    <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
                                   box-shadow:0 6px 18px rgba(17,24,39,.08);padding:18px">
-            <h3 style="margin:4px 0 8px;font-size:20px">
+                        <h3 style="margin:4px 0 8px;font-size:20px">
               <span style="display:inline-block;margin-right:8px;background:#d1fae5;color:#065f46;
                            border:1px solid #a7f3d0;border-radius:6px;padding:2px 6px;font-size:11px;font-weight:700">
                 AUTO
               </span>
-              Global CC Policy
-            </h3>
-            <p style="color:#4b5563;margin:0">
-              Configure a global list of CC partners (by email) from Settings. Applied platform-wide to supported flows.
-            </p>
-          </td>
+                            Global CC Policy
+                        </h3>
+                        <p style="color:#4b5563;margin:0">
+                            Configure a global list of CC partners (by email) from Settings. Applied platform-wide to
+                            supported flows.
+                        </p>
+                    </td>
 
-          <!-- Card 2 -->
-          <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+                    <!-- Card 2 -->
+                    <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
                                   box-shadow:0 6px 18px rgba(17,24,39,.08);padding:18px">
-            <h3 style="margin:4px 0 8px;font-size:20px">
+                        <h3 style="margin:4px 0 8px;font-size:20px">
               <span style="display:inline-block;margin-right:8px;background:#e0f2fe;color:#0c4a6e;
                            border:1px solid #bae6fd;border-radius:6px;padding:2px 6px;font-size:11px;font-weight:700">
                 SMART
               </span>
-              Sensible Fallbacks
-            </h3>
-            <p style="color:#4b5563;margin:0">
-              If no global list is set, CC falls back to the responsible user per document type (e.g., salesperson or purchaser).
-            </p>
-          </td>
+                            Sensible Fallbacks
+                        </h3>
+                        <p style="color:#4b5563;margin:0">
+                            If no global list is set, CC falls back to the responsible user per document type (e.g.,
+                            salesperson or purchaser).
+                        </p>
+                    </td>
 
-          <!-- Card 3 -->
-          <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+                    <!-- Card 3 -->
+                    <td width="33%" style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;
                                   box-shadow:0 6px 18px rgba(17,24,39,.08);padding:18px">
-            <h3 style="margin:4px 0 8px;font-size:20px">
+                        <h3 style="margin:4px 0 8px;font-size:20px">
               <span style="display:inline-block;margin-right:8px;background:#ede9fe;color:#5b21b6;
                            border:1px solid #ddd6fe;border-radius:6px;padding:2px 6px;font-size:11px;font-weight:700">
                 SAFE
               </span>
-              Upgrade-Proof
-            </h3>
-            <p style="color:#4b5563;margin:0">
-              No email template overrides. CC is injected at runtime right before sending, keeping upgrades smooth.
-            </p>
-          </td>
-        </tr>
-      </table>
+                            Upgrade-Proof
+                        </h3>
+                        <p style="color:#4b5563;margin:0">
+                            No email template overrides. CC is injected at runtime right before sending, keeping
+                            upgrades smooth.
+                        </p>
+                    </td>
+                </tr>
+            </table>
 
+        </div>
     </div>
-  </div>
 </section>
 
 
-<!-- COVERAGE -->
-<section class="section" style="padding-top:0">
-    <div class="wrap">
-        <h2>Where CC is applied</h2>
-        <div class="grid cards-2" style="margin-top:8px">
-            <div class="card">
-                <h3>Business Flows</h3>
-                <ul>
-                    <li>Sales: Quotation / Order emails, cancellation notices</li>
-                    <li>Purchase: RFQ / Purchase Order emails</li>
-                    <li>Accounting: Invoice / Credit Note send wizard</li>
-                    <li>Inventory: Delivery confirmation emails</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Technical Touchpoints</h3>
-                <ul>
-                    <li>Generic composer (<code>mail.compose.message</code>)</li>
-                    <li>Invoice send wizard (<code>account.move.send</code>)</li>
-                    <li>Sales cancellation wizard</li>
-                    <li>Mail notifications pipeline (<code>mail.thread</code>)</li>
-                    <li>Picking flow: “next CC” preview &amp; merge before send</li>
-                </ul>
+<!-- COVERAGE — soft gradient panel, 2 pastel cards -->
+<section style="padding:56px 0;background:#f7f8fa">
+    <div style="max-width:1180px;margin:0 auto;padding:0 18px">
+        <div style="background:linear-gradient(180deg,#ffffff 0%,#f3f7ff 100%);
+                border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 10px 30px rgba(17,24,39,.08);padding:26px">
+            <h2 style="font-size:38px;margin:0 0 18px;text-align:center">Where CC is applied</h2>
+
+            <table width="100%" cellpadding="18" cellspacing="18" border="0">
+                <tr valign="top">
+                    <!-- Card A -->
+                    <td style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:18px">
+                        <h3 style="margin:0 0 8px;font-size:20px">Business Flows</h3>
+                        <ul style="margin:0 0 0 18px;color:#374151">
+                            <li>Sales: Quotation / Order emails, cancellation notices</li>
+                            <li>Purchase: RFQ / Purchase Order emails</li>
+                            <li>Accounting: Invoice / Credit Note send wizard</li>
+                            <li>Inventory: Delivery confirmation emails</li>
+                        </ul>
+                    </td>
+
+                    <!-- Card B -->
+                    <td style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:14px;padding:18px">
+                        <h3 style="margin:0 0 8px;font-size:20px">Technical Touchpoints</h3>
+                        <ul style="margin:0 0 0 18px;color:#374151">
+                            <li>Generic composer (<code>mail.compose.message</code>)</li>
+                            <li>Invoice send wizard (<code>account.move.send</code>)</li>
+                            <li>Sales cancellation wizard</li>
+                            <li>Mail notifications pipeline (<code>mail.thread</code>)</li>
+                            <li>Picking flow: “next CC” preview &amp; merge before send</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS — warm panel, numbered step cards -->
+<section style="padding:56px 0;background:#fff">
+    <div style="max-width:1180px;margin:0 auto;padding:0 18px">
+        <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;
+                box-shadow:0 10px 30px rgba(17,24,39,.06);padding:26px">
+            <h2 style="font-size:38px;margin:0 0 18px;text-align:center">How it works (logic)</h2>
+
+            <table width="100%" cellpadding="18" cellspacing="18" border="0">
+                <tr valign="top">
+                    <!-- Step 1 -->
+                    <td style="background:#ffffff;border:1px solid #ffe4cc;border-radius:14px;padding:18px">
+                        <div style="display:inline-block;background:#fdba74;color:#7c2d12;border-radius:999px;
+                        padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:6px">1
+                        </div>
+                        <h3 style="margin:0 0 6px;font-size:20px">Resolve CC candidates</h3>
+                        <p style="color:#4b5563;margin:0">Read global CC list (partners with email). If empty/disabled,
+                            compute fallback (e.g., responsible user).</p>
+                    </td>
+
+                    <!-- Step 2 -->
+                    <td style="background:#ffffff;border:1px solid #ffe4cc;border-radius:14px;padding:18px">
+                        <div style="display:inline-block;background:#fcd34d;color:#78350f;border-radius:999px;
+                        padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:6px">2
+                        </div>
+                        <h3 style="margin:0 0 6px;font-size:20px">Prefill the wizard</h3>
+                        <p style="color:#4b5563;margin:0">On opening wizards/composer, CC is prefilled. Users can
+                            add/remove CCs before sending.</p>
+                    </td>
+
+                    <!-- Step 3 -->
+                    <td style="background:#ffffff;border:1px solid #ffe4cc;border-radius:14px;padding:18px">
+                        <div style="display:inline-block;background:#fbbf24;color:#7c2d12;border-radius:999px;
+                        padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:6px">3
+                        </div>
+                        <h3 style="margin:0 0 6px;font-size:20px">Inject at send</h3>
+                        <p style="color:#4b5563;margin:0">Right before dispatch, the final, de-duplicated CC list is
+                            written to the outgoing message.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <div style="background:#fff;border:1px dashed #fed7aa;border-radius:12px;padding:14px;margin-top:12px;color:#7c2d12">
+                <strong>Tip:</strong> Partners without an email are ignored. Duplicates are removed by email address.
+                You stay in control from the wizard UI.
             </div>
         </div>
     </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section" style="background:#fff">
-    <div class="wrap">
-        <h2>How it works (logic)</h2>
-        <div class="grid cards-3" style="margin-top:8px">
-            <div class="card">
-                <h3>1) Resolve CC candidates</h3>
-                <p>Read global CC list (partners with email). If empty/disabled, compute fallback (e.g., responsible
-                    user).</p>
-            </div>
-            <div class="card">
-                <h3>2) Prefill the wizard</h3>
-                <p>On opening wizards/composer, CC is prefilled. Users can add/remove CCs before sending.</p>
-            </div>
-            <div class="card">
-                <h3>3) Inject at send</h3>
-                <p>Right before dispatch, the final, de-duplicated CC list is written to the outgoing message.</p>
-            </div>
-        </div>
-
-        <div class="callout" style="margin-top:18px">
-            <strong>Tip:</strong> Partners without an email are ignored. Duplicates are removed by email address. You
-            stay in control from the wizard UI.
-        </div>
-    </div>
-</section>
 
 <!-- SCREENSHOTS (replace image files with your actual ones) -->
 <section class="section">
