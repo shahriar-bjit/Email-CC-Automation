@@ -19,7 +19,7 @@
         'views/inherited_res_config_settings_views.xml',
     ],
     'images': [
-        'static/description/banner.png',
+        'static/description/banner.gif',
     ],
     'installable': True,
     'application': False,
