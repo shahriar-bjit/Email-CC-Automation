@@ -245,25 +245,46 @@
 </head>
 <body style="margin:0;padding:0;background:#f7f8fa;color:#111827;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;line-height:1.55">
 
-<!-- HERO -->
+<!-- HERO: keep it minimal -->
 <header style="position:relative;overflow:hidden;background:linear-gradient(135deg,#2563eb,#1e40af);color:#fff">
     <div style="max-width:1180px;margin:0 auto;padding:84px 18px;text-align:center">
         <img src="images/icon.png" alt="Email CC Automation Icon"
-             style="height:64px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.25));border-radius:12px">
-        <h1 style="font-size:48px;margin:12px 0 10px">Email CC Automation</h1>
-        <p style="font-size:18px;opacity:.95;max-width:840px;margin:0 auto">
+             style="height:64px;width:auto;border-radius:12px">
+        <h1 style="font-size:48px;margin:12px 0 0">Email CC Automation</h1>
+    </div>
+</header>
+
+<!-- INTRO + BADGES (outside header so they survive) -->
+<section style="padding:18px 0;background:#f7f8fa">
+    <div style="max-width:1180px;margin:0 auto;padding:0 18px;text-align:center">
+        <p style="font-size:18px;max-width:840px;margin:0 auto 12px;color:#4b5563">
             Ensure the right people are always in the loop. Automatically inject CC recipients across Sales, Purchases,
             Invoicing, and Delivery emails — upgrade-safe and template-agnostic.
         </p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px">
-            <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:13px">Odoo 18.0</span>
-            <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:13px">Enterprise</span>
-            <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:13px">No Template Overrides</span>
-            <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:13px">Wizard-Friendly UX</span>
-            <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:13px">Tested</span>
-        </div>
+
+        <!-- use table for “badges”; flex often gets stripped -->
+        <table cellpadding="6" cellspacing="6" border="0" style="margin:6px auto 0">
+            <tr>
+                <td style="background:#eef2ff;color:#1f2937;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-size:13px">
+                    Odoo 18.0
+                </td>
+                <td style="background:#eef2ff;color:#1f2937;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-size:13px">
+                    Enterprise
+                </td>
+                <td style="background:#eef2ff;color:#1f2937;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-size:13px">
+                    No Template Overrides
+                </td>
+                <td style="background:#eef2ff;color:#1f2937;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-size:13px">
+                    Wizard-Friendly UX
+                </td>
+                <td style="background:#eef2ff;color:#1f2937;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-size:13px">
+                    Tested
+                </td>
+            </tr>
+        </table>
     </div>
-</header>
+</section>
+
 
 <!-- VALUE -->
 <section class="section">
