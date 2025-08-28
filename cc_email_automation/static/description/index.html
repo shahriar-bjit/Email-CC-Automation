@@ -5,38 +5,39 @@
     <title>Email CC Automation – Odoo 18</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style>
-        /* ---- Screenshots, vendor-bid style ---- */
-        .screenshots {
+        /* --- Screenshots: contained, centered, responsive --- */
+        .ss {
             padding: 56px 0;
             background: #f7f8fa;
         }
 
-        .screenshots .wrap {
+        .ss .wrap {
             max-width: 1180px;
             margin: 0 auto;
             padding: 0 18px;
         }
 
-        .sc-title {
+        .ss-title {
             font-size: 38px;
             margin: 0 0 18px;
             text-align: center;
         }
 
-        .sc-grid {
+        .ss-grid {
             display: grid;
             gap: 18px;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr; /* 1-up on small */
         }
 
-        /* Two-up on large screens, single on small – fully centered */
         @media (min-width: 980px) {
-            .sc-grid {
+            .ss-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
+
+            /* 2-up on large */
         }
 
-        .sc-card {
+        .ss-card {
             background: #ffffff;
             border: 1px solid #e5e7eb;
             border-radius: 14px;
@@ -44,36 +45,26 @@
             padding: 14px;
         }
 
-        /* The frame prevents overflow while keeping the image crisp */
-        .sc-frame {
+        .ss-frame {
             border-radius: 10px;
-            overflow: hidden;
+            overflow: hidden; /* <- stops crossing */
             background: #fff;
         }
 
-        /* Make absolutely sure images never “cross” the page */
-        .sc-card img {
+        .ss-img {
             display: block;
             width: 100%;
             max-width: 100%;
             height: auto;
+            /* Optional: cap height to keep a tidy gallery (uncomment if you want) */
+            /* max-height: 620px; object-fit: contain; */
         }
 
-        /* Optional: if your screenshots are extremely tall, contain them
-           without distortion (uncomment to cap height)
-        .sc-card img { max-height: 780px; object-fit: contain; }
-        */
-
-        .sc-cap {
+        .ss-cap {
             text-align: center;
             color: #4b5563;
             font-size: 14px;
             margin-top: 8px;
-        }
-
-        /* A little breathing room under the whole gallery */
-        .screenshots .wrap .sc-grid {
-            margin-top: 16px;
         }
     </style>
 </head>
@@ -322,116 +313,105 @@
 
 
 <!-- SCREENSHOTS (replace image files with your actual ones) -->
-<section class="screenshots">
-    <div class="wrap">
-        <h2 class="sc-title">Screenshots</h2>
+<section class="ss">
+  <div class="wrap">
+    <h2 class="ss-title">Screenshots</h2>
 
-        <div class="sc-grid">
-            <!-- 1 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/cc_settings.png" alt="Global CC settings">
-                </div>
-                <figcaption class="sc-cap">Global CC configuration in General Settings</figcaption>
-            </figure>
+    <div class="ss-grid">
 
-            <!-- 2 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/credit_note_cc.png" alt="Credit Note send with CC">
-                </div>
-                <figcaption class="sc-cap">Credit Note — send popup with auto-filled CC</figcaption>
-            </figure>
-
-            <!-- 3 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/invoice_cc.png" alt="Invoice send with global partners CC">
-                </div>
-                <figcaption class="sc-cap">Invoice — global CC partners auto-filled</figcaption>
-            </figure>
-
-            <!-- 4 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/fallback_cc.png" alt="Invoice send fallback CC">
-                </div>
-                <figcaption class="sc-cap">Invoice — fallback CC (responsible user)</figcaption>
-            </figure>
-
-            <!-- 5 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/order_cc.png" alt="Sales order email CC">
-                </div>
-                <figcaption class="sc-cap">Sales Order email — CC applied to message</figcaption>
-            </figure>
-
-            <!-- 6 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/quotation_cc.png" alt="Quotation email CC">
-                </div>
-                <figcaption class="sc-cap">Quotation email — CC applied to message</figcaption>
-            </figure>
-
-            <!-- 7 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/cancel_cc.png" alt="Sales order cancel email CC">
-                </div>
-                <figcaption class="sc-cap">Sales Order cancellation — CC applied</figcaption>
-            </figure>
-
-            <!-- 8 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/po_cc.png" alt="Purchase order compose CC">
-                </div>
-                <figcaption class="sc-cap">Purchase Order — compose email with CC</figcaption>
-            </figure>
-
-            <!-- 9 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/rfq_cc.png" alt="RFQ compose CC">
-                </div>
-                <figcaption class="sc-cap">Request for Quotation — compose email with CC</figcaption>
-            </figure>
-
-            <!-- 10 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/shipping_cc1.png" alt="Delivery email CC 1">
-                </div>
-                <figcaption class="sc-cap">Delivery Order email — CC auto-applied</figcaption>
-            </figure>
-
-            <!-- 11 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/shipping_cc2.png" alt="Delivery email CC 2">
-                </div>
-                <figcaption class="sc-cap">Delivery notification — CC auto-applied</figcaption>
-            </figure>
-
-            <!-- 12 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/example1.png" alt="Outgoing mail CC example 1">
-                </div>
-                <figcaption class="sc-cap">Outgoing mail — CC list applied</figcaption>
-            </figure>
-
-            <!-- 13 -->
-            <figure class="sc-card">
-                <div class="sc-frame">
-                    <img src="images/example2.png" alt="Outgoing mail CC example 2">
-                </div>
-                <figcaption class="sc-cap">Outgoing mail — CC list applied</figcaption>
-            </figure>
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/settings_cc.png" alt="Global CC settings">
         </div>
+        <figcaption class="ss-cap">Global CC configuration in General Settings</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/credit_note_cc.png" alt="Credit Note send with CC">
+        </div>
+        <figcaption class="ss-cap">Credit Note — send popup with auto-filled CC</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/invoice_cc.png" alt="Invoice send with partners CC">
+        </div>
+        <figcaption class="ss-cap">Invoice — global CC partners auto-filled</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/fallback_cc.png" alt="Invoice send fallback CC">
+        </div>
+        <figcaption class="ss-cap">Invoice — fallback CC (responsible user)</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/order_cc.png" alt="Sales order email CC">
+        </div>
+        <figcaption class="ss-cap">Sales Order email — CC applied to message</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/quotation_cc.png" alt="Quotation email CC">
+        </div>
+        <figcaption class="ss-cap">Quotation email — CC applied to message</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/cancel_cc.png" alt="Sales order cancel email CC">
+        </div>
+        <figcaption class="ss-cap">Sales Order cancellation — CC applied</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/po_cc.png" alt="Purchase order compose CC">
+        </div>
+        <figcaption class="ss-cap">Purchase Order — compose email with CC</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/rfq_cc.png" alt="RFQ compose CC">
+        </div>
+        <figcaption class="ss-cap">Request for Quotation — compose email with CC</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/shipping_cc1.png" alt="Delivery email CC (example 1)">
+        </div>
+        <figcaption class="ss-cap">Delivery Order email — CC auto-applied</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/shipping_cc2.png" alt="Delivery email CC (example 2)">
+        </div>
+        <figcaption class="ss-cap">Delivery notification — CC auto-applied</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/example1.png" alt="Outgoing mail CC (example 1)">
+        </div>
+        <figcaption class="ss-cap">Outgoing mail — CC list applied</figcaption>
+      </figure>
+
+      <figure class="ss-card">
+        <div class="ss-frame">
+          <img class="ss-img" src="static/description/images/example2.png" alt="Outgoing mail CC (example 2)">
+        </div>
+        <figcaption class="ss-cap">Outgoing mail — CC list applied</figcaption>
+      </figure>
+
     </div>
+  </div>
 </section>
 
 
