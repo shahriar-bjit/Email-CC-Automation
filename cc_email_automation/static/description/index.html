@@ -26,7 +26,7 @@
         .ss-grid {
             display: grid;
             gap: 18px;
-            grid-template-columns: 1fr; /* 1 per row on phones */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
         @media (min-width: 760px) {
@@ -47,15 +47,17 @@
 
         .ss-frame {
             border-radius: 10px;
-            overflow: hidden; /* <-- prevents overflow */
+            overflow: hidden;
             background: #f8fafc;
+            max-height: 500px; /* Optional: cap image height */
         }
 
         .ss-img {
             display: block;
             width: 100%;
             max-width: 100%;
-            height: auto; /* keep aspect ratio */
+            height: auto;
+            object-fit: contain; /* Optional: if images get cropped */
         }
 
         .ss-cap {
