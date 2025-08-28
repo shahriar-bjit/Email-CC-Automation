@@ -620,55 +620,77 @@
 </section>
 
 
-<!-- COMPATIBILITY & NOTES — 3 compact badges -->
+<!-- COMPATIBILITY & NOTES — Ticket-stub chips (unique) -->
 <section style="padding:56px 0;background:#fff">
     <div style="max-width:1180px;margin:0 auto;padding:0 18px">
         <div style="background:#fff;border:1px solid #e5e7eb;border-radius:18px;box-shadow:0 12px 34px rgba(17,24,39,.08);padding:26px">
             <h2 style="font-size:38px;margin:0 0 18px;text-align:center">Compatibility &amp; Notes</h2>
 
-            <div style="font-size:0">
-                <!-- tile -->
-                <div style="display:inline-block;width:33.33%;min-width:260px;box-sizing:border-box;padding:8px;font-size:16px;vertical-align:top">
-                    <div style="border-radius:16px;padding:18px;color:#0b1220;
-                      background:linear-gradient(135deg,#eef2ff,#dbeafe);border:1px solid #c7d2fe;box-shadow:0 8px 20px rgba(99,102,241,.18)">
-                        <div style="display:flex;align-items:center;gap:10px">
-                            <div style="width:34px;height:34px;border-radius:50%;background:#6366f1;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800">
-                                ✓
-                            </div>
-                            <h3 style="margin:0">Supported Versions</h3>
+            <div style="font-size:0;text-align:center">
+
+                <!-- TICKET 1 -->
+                <div style="display:inline-block;vertical-align:top;width:33.33%;min-width:280px;padding:8px;box-sizing:border-box;font-size:16px">
+                    <div style="position:relative;border-radius:18px;padding:18px 18px 18px 78px;overflow:hidden;
+                      background:linear-gradient(135deg,#eef2ff,#e0e7ff);border:1px solid #c7d2fe;
+                      box-shadow:0 8px 22px rgba(99,102,241,.18)">
+                        <!-- icon badge -->
+                        <div style="position:absolute;left:18px;top:50%;transform:translateY(-50%);
+                        width:44px;height:44px;border-radius:50%;background:#6366f1;color:#fff;
+                        display:flex;align-items:center;justify-content:center;font-weight:900">✓
                         </div>
-                        <p style="margin:8px 0 0;color:#4b5563">Odoo 18.0</p>
+                        <!-- perforation -->
+                        <div style="position:absolute;left:66px;top:10px;bottom:10px;border-left:2px dashed rgba(99,102,241,.45)"></div>
+                        <!-- notches -->
+                        <span style="position:absolute;left:-12px;top:50%;transform:translateY(-50%);
+                         width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #e5e7eb"></span>
+                        <span style="position:absolute;right:-12px;top:50%;transform:translateY(-50%);
+                         width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #e5e7eb"></span>
+
+                        <h3 style="margin:0 0 6px;font-size:22px">Supported Versions</h3>
+                        <p style="color:#4b5563;margin:0">Odoo 18.0</p>
                     </div>
                 </div>
 
-                <!-- tile -->
-                <div style="display:inline-block;width:33.33%;min-width:260px;box-sizing:border-box;padding:8px;font-size:16px;vertical-align:top">
-                    <div style="border-radius:16px;padding:18px;color:#0b1220;
-                      background:linear-gradient(135deg,#ecfeff,#cffafe);border:1px solid #bae6fd;box-shadow:0 8px 20px rgba(14,165,233,.16)">
-                        <div style="display:flex;align-items:center;gap:10px">
-                            <div style="width:34px;height:34px;border-radius:50%;background:#0ea5e9;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800">
-                                🏢
-                            </div>
-                            <h3 style="margin:0">Multi-company</h3>
+                <!-- TICKET 2 -->
+                <div style="display:inline-block;vertical-align:top;width:33.33%;min-width:280px;padding:8px;box-sizing:border-box;font-size:16px">
+                    <div style="position:relative;border-radius:18px;padding:18px 18px 18px 78px;overflow:hidden;
+                      background:linear-gradient(135deg,#ecfeff,#cffafe);border:1px solid #bae6fd;
+                      box-shadow:0 8px 22px rgba(14,165,233,.16)">
+                        <div style="position:absolute;left:18px;top:50%;transform:translateY(-50%);
+                        width:44px;height:44px;border-radius:50%;background:#0ea5e9;color:#fff;
+                        display:flex;align-items:center;justify-content:center;font-weight:900">🏢
                         </div>
-                        <p style="margin:8px 0 0;color:#4b5563">Global configuration applies system-wide.</p>
+                        <div style="position:absolute;left:66px;top:10px;bottom:10px;border-left:2px dashed rgba(14,165,233,.45)"></div>
+                        <span style="position:absolute;left:-12px;top:50%;transform:translateY(-50%);
+                         width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #e5e7eb"></span>
+                        <span style="position:absolute;right:-12px;top:50%;transform:translateY(-50%);
+                         width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #e5e7eb"></span>
+
+                        <h3 style="margin:0 0 6px;font-size:22px">Multi-company</h3>
+                        <p style="color:#4b5563;margin:0">Global configuration applies system-wide.</p>
                     </div>
                 </div>
 
-                <!-- tile -->
-                <div style="display:inline-block;width:33.33%;min-width:260px;box-sizing:border-box;padding:8px;font-size:16px;vertical-align:top">
-                    <div style="border-radius:16px;padding:18px;color:#0b1220;
-                      background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #fde68a;box-shadow:0 8px 20px rgba(245,158,11,.16)">
-                        <div style="display:flex;align-items:center;gap:10px">
-                            <div style="width:34px;height:34px;border-radius:50%;background:#f59e0b;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:800">
-                                🔒
-                            </div>
-                            <h3 style="margin:0">Security</h3>
+                <!-- TICKET 3 -->
+                <div style="display:inline-block;vertical-align:top;width:33.33%;min-width:280px;padding:8px;box-sizing:border-box;font-size:16px">
+                    <div style="position:relative;border-radius:18px;padding:18px 18px 18px 78px;overflow:hidden;
+                      background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #fde68a;
+                      box-shadow:0 8px 22px rgba(245,158,11,.16)">
+                        <div style="position:absolute;left:18px;top:50%;transform:translateY(-50%);
+                        width:44px;height:44px;border-radius:50%;background:#f59e0b;color:#fff;
+                        display:flex;align-items:center;justify-content:center;font-weight:900">🔒
                         </div>
-                        <p style="margin:8px 0 0;color:#4b5563">Only administrators can modify the global CC
-                            configuration.</p>
+                        <div style="position:absolute;left:66px;top:10px;bottom:10px;border-left:2px dashed rgba(245,158,11,.45)"></div>
+                        <span style="position:absolute;left:-12px;top:50%;transform:translateY(-50%);
+                         width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #e5e7eb"></span>
+                        <span style="position:absolute;right:-12px;top:50%;transform:translateY(-50%);
+                         width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #e5e7eb"></span>
+
+                        <h3 style="margin:0 0 6px;font-size:22px">Security</h3>
+                        <p style="color:#4b5563;margin:0">Only admins can modify the global CC configuration.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
