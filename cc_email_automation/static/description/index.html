@@ -425,6 +425,7 @@
     </div>
 </section>
 
+
 <!-- HOW IT WORKS — smaller green numbered circles -->
 <section style="padding:56px 0;background:#fff">
     <div style="max-width:1180px;margin:0 auto;padding:0 18px">
@@ -567,34 +568,43 @@
 </section>
 
 
-<!-- CONFIGURATION — 2 soft cards -->
+<!-- CONFIGURATION — “striped” bands with accent bars (no tables, no cards) -->
 <section style="padding:56px 0;background:#f7f8fa">
     <div style="max-width:1180px;margin:0 auto;padding:0 18px">
         <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 10px 30px rgba(17,24,39,.08);padding:26px">
             <h2 style="font-size:38px;margin:0 0 18px;text-align:center">Configuration</h2>
-            <table width="100%" cellpadding="18" cellspacing="18" border="0">
-                <tr valign="top">
-                    <td style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:18px">
-                        <h3 style="margin:0 0 8px">Global CC List</h3>
-                        <ul style="margin:0 0 0 18px;color:#374151">
-                            <li>Go to <em>Settings → General Settings → Email CC Automation</em>.</li>
-                            <li>Enable the feature and add partners (their emails) to the global CC list.</li>
-                            <li>Save — applies to supported wizards and flows.</li>
-                        </ul>
-                    </td>
-                    <td style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:14px;padding:18px">
-                        <h3 style="margin:0 0 8px">Behavior &amp; Fallback</h3>
-                        <ul style="margin:0 0 0 18px;color:#374151">
-                            <li>If the global list is empty, CC falls back to the responsible user per document.</li>
-                            <li>Inventory pickings provide a “next CC” preview to adjust per operation.</li>
-                            <li>Partners without an email are skipped; duplicates are de-duplicated.</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+
+            <!-- Stripe 1 -->
+            <div style="background:#ecfdf5;border:1px solid #bbf7d0;border-left:10px solid #10b981;
+                  border-radius:12px;padding:16px 18px;margin-bottom:14px">
+        <span style="display:inline-block;background:#10b981;color:#fff;border-radius:999px;
+                     padding:4px 12px;font-size:12px;font-weight:700;margin-bottom:6px">
+          Global CC List
+        </span>
+                <ul style="margin:8px 0 0 18px;color:#374151">
+                    <li>Go to <em>Settings → General Settings → Email CC Automation</em>.</li>
+                    <li>Enable the feature and add partners (their emails) to the global CC list.</li>
+                    <li>Save — applies to supported wizards and flows.</li>
+                </ul>
+            </div>
+
+            <!-- Stripe 2 -->
+            <div style="background:#eff6ff;border:1px solid #bfdbfe;border-left:10px solid #2563eb;
+                  border-radius:12px;padding:16px 18px">
+        <span style="display:inline-block;background:#2563eb;color:#fff;border-radius:999px;
+                     padding:4px 12px;font-size:12px;font-weight:700;margin-bottom:6px">
+          Behavior &amp; Fallback
+        </span>
+                <ul style="margin:8px 0 0 18px;color:#374151">
+                    <li>If the global list is empty, CC falls back to the responsible user per document.</li>
+                    <li>Inventory pickings provide a “next CC” preview to adjust per operation.</li>
+                    <li>Partners without an email are skipped; duplicates are de-duplicated.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- COMPATIBILITY & NOTES — 3 compact badges -->
 <section style="padding:56px 0;background:#fff">
