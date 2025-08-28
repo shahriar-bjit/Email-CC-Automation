@@ -53,20 +53,22 @@
         }
 
         .ss-img {
-            display: block;
-            width: 100%;
             max-width: 100%;
             height: auto;
-            max-height: 500px; /* or whatever fits visually */
-            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 0 auto;
         }
 
         .ss-cap {
             text-align: center;
-            color: #4b5563;
-            font-size: 14px;
-            margin-top: 8px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: #333;
         }
+
 
         /* Safety net: NEVER let images overflow the page, anywhere */
         img {
@@ -322,113 +324,85 @@
 
 <!-- SCREENSHOTS (replace image files with your actual ones) -->
 <!-- SCREENSHOTS (wrapped in white card to fit the page) -->
-<section class="ss">
-  <div class="wrap">
+<!-- SCREENSHOTS (one-column vertical card layout) -->
+<section class="ss" style="padding: 80px 0; background-color: #f3f4f6;">
+    <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
 
-    <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;
-                box-shadow:0 10px 30px rgba(17,24,39,.08);padding:26px">
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(17,24,39,.08); padding: 40px;">
 
-      <h2 class="ss-title">Screenshots</h2>
+            <h2 class="ss-title" style="text-align: center; margin-bottom: 40px;">Screenshots</h2>
 
-      <div class="ss-grid">
+            <!-- Each image and caption as a vertical card -->
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Global CC configuration in General Settings</p>
+                <img class="ss-img" src="images/cc_settings.png" alt="Global CC settings">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/cc_settings.png" alt="Global CC settings">
-          </div>
-          <figcaption class="ss-cap">Global CC configuration in General Settings</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Credit Note — send popup with auto-filled CC</p>
+                <img class="ss-img" src="images/credit_note_cc.png" alt="Credit Note send with CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/credit_note_cc.png" alt="Credit Note send with CC">
-          </div>
-          <figcaption class="ss-cap">Credit Note — send popup with auto-filled CC</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Invoice — global CC partners auto-filled</p>
+                <img class="ss-img" src="images/invoice_cc.png" alt="Invoice send with partners CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/invoice_cc.png" alt="Invoice send with partners CC">
-          </div>
-          <figcaption class="ss-cap">Invoice — global CC partners auto-filled</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Invoice — fallback CC (responsible user)</p>
+                <img class="ss-img" src="images/fallback_cc.png" alt="Invoice send fallback CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/fallback_cc.png" alt="Invoice send fallback CC">
-          </div>
-          <figcaption class="ss-cap">Invoice — fallback CC (responsible user)</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Sales Order email — CC applied to message</p>
+                <img class="ss-img" src="images/order_cc.png" alt="Sales order email CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/order_cc.png" alt="Sales order email CC">
-          </div>
-          <figcaption class="ss-cap">Sales Order email — CC applied to message</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Quotation email — CC applied to message</p>
+                <img class="ss-img" src="images/quotation_cc.png" alt="Quotation email CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/quotation_cc.png" alt="Quotation email CC">
-          </div>
-          <figcaption class="ss-cap">Quotation email — CC applied to message</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Sales Order cancellation — CC applied</p>
+                <img class="ss-img" src="images/cancel_cc.png" alt="Sales order cancel email CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/cancel_cc.png" alt="Sales order cancel email CC">
-          </div>
-          <figcaption class="ss-cap">Sales Order cancellation — CC applied</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Purchase Order — compose email with CC</p>
+                <img class="ss-img" src="images/po_cc.png" alt="Purchase order compose CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/po_cc.png" alt="Purchase order compose CC">
-          </div>
-          <figcaption class="ss-cap">Purchase Order — compose email with CC</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Request for Quotation — compose email with CC</p>
+                <img class="ss-img" src="images/rfq_cc.png" alt="RFQ compose CC">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/rfq_cc.png" alt="RFQ compose CC">
-          </div>
-          <figcaption class="ss-cap">Request for Quotation — compose email with CC</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Delivery Order email — CC auto-applied</p>
+                <img class="ss-img" src="images/shipping_cc1.png" alt="Delivery email CC (example 1)">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/shipping_cc1.png" alt="Delivery email CC (example 1)">
-          </div>
-          <figcaption class="ss-cap">Delivery Order email — CC auto-applied</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Delivery notification — CC auto-applied</p>
+                <img class="ss-img" src="images/shipping_cc2.png" alt="Delivery email CC (example 2)">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/shipping_cc2.png" alt="Delivery email CC (example 2)">
-          </div>
-          <figcaption class="ss-cap">Delivery notification — CC auto-applied</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Outgoing mail — CC list applied</p>
+                <img class="ss-img" src="images/example1.png" alt="Outgoing mail CC (example 1)">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/example1.png" alt="Outgoing mail CC (example 1)">
-          </div>
-          <figcaption class="ss-cap">Outgoing mail — CC list applied</figcaption>
-        </figure>
+            <div style="margin-bottom: 48px;">
+                <p class="ss-cap">Outgoing mail — CC list applied</p>
+                <img class="ss-img" src="images/example2.png" alt="Outgoing mail CC (example 2)">
+            </div>
 
-        <figure class="ss-card">
-          <div class="ss-frame">
-            <img class="ss-img" src="images/example2.png" alt="Outgoing mail CC (example 2)">
-          </div>
-          <figcaption class="ss-cap">Outgoing mail — CC list applied</figcaption>
-        </figure>
+        </div>
 
-      </div>
     </div>
-
-  </div>
 </section>
-
 
 
 <!-- INSTALLATION — numbered step cards (1 • 2 • 3), Apps-store safe -->
