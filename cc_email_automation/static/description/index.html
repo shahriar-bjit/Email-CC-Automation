@@ -388,50 +388,50 @@
 </section>
 
 
-<!-- WHERE CC IS APPLIED — separated cards + colored dashed tip -->
+<!-- WHERE CC IS APPLIED — centered two cards with space between -->
 <section style="padding:56px 0;background:#f7f8fa">
-  <div style="max-width:1180px;margin:0 auto;padding:0 18px">
-    <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 10px 30px rgba(17,24,39,.08);padding:26px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 18px">
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 10px 30px rgba(17,24,39,.08);padding:26px">
 
-      <h2 style="font-size:38px;margin:0 0 18px;text-align:center">Where CC is applied</h2>
+            <h2 style="font-size:38px;margin:0 0 18px;text-align:center">Where CC is applied</h2>
 
-      <!-- row (use padding wrappers to create a guaranteed gap) -->
-      <div style="display:flex;flex-wrap:wrap;margin:-10px">
-        <!-- LEFT card -->
-        <div style="flex:1 1 480px;padding:10px;box-sizing:border-box">
-          <div style="background:#fff;border:1px solid #bbf7d0;border-radius:14px;box-shadow:0 6px 18px rgba(16,185,129,.08);padding:18px">
-            <h3 style="margin:0 0 8px;color:#065f46;font-size:20px">Business Flows</h3>
-            <ul style="margin:6px 0 0 18px;color:#374151;padding:0;line-height:1.55">
-              <li style="margin:6px 0">Sales: Quotation / Order emails, cancellation notices</li>
-              <li style="margin:6px 0">Purchase: RFQ / Purchase Order emails</li>
-              <li style="margin:6px 0">Accounting: Invoice / Credit Note send wizard</li>
-              <li style="margin:6px 0">Inventory: Delivery confirmation emails</li>
-            </ul>
-          </div>
+            <!-- row: center the items -->
+            <div style="display:flex;flex-wrap:wrap;justify-content:center">
+                <!-- LEFT card wrapper (controls spacing + centering) -->
+                <div style="width:520px;max-width:100%;padding:10px;box-sizing:border-box">
+                    <div style="background:#fff;border:1px solid #bbf7d0;border-radius:14px;box-shadow:0 6px 18px rgba(16,185,129,.08);padding:18px">
+                        <h3 style="margin:0 0 8px;color:#065f46;font-size:20px">Business Flows</h3>
+                        <ul style="margin:6px 0 0 18px;color:#374151;padding:0;line-height:1.55">
+                            <li style="margin:6px 0">Sales: Quotation / Order emails, cancellation notices</li>
+                            <li style="margin:6px 0">Purchase: RFQ / Purchase Order emails</li>
+                            <li style="margin:6px 0">Accounting: Invoice / Credit Note send wizard</li>
+                            <li style="margin:6px 0">Inventory: Delivery confirmation emails</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- RIGHT card wrapper -->
+                <div style="width:520px;max-width:100%;padding:10px;box-sizing:border-box">
+                    <div style="background:#fff;border:1px solid #bfdbfe;border-radius:14px;box-shadow:0 6px 18px rgba(14,165,233,.08);padding:18px">
+                        <h3 style="margin:0 0 8px;color:#0e7490;font-size:20px">Technical Touchpoints</h3>
+                        <ul style="margin:6px 0 0 18px;color:#374151;padding:0;line-height:1.55">
+                            <li style="margin:6px 0">Generic composer (<code>mail.compose.message</code>)</li>
+                            <li style="margin:6px 0">Invoice send wizard (<code>account.move.send</code>)</li>
+                            <li style="margin:6px 0">Sales cancellation wizard</li>
+                            <li style="margin:6px 0">Mail notifications pipeline (<code>mail.thread</code>)</li>
+                            <li style="margin:6px 0">Picking flow: “next CC” preview &amp; merge before send</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- colored dashed tip -->
+            <div style="margin-top:16px;background:#eff6ff;border:1px dashed #2563eb;border-radius:12px;padding:12px 14px;color:#1e3a8a;text-align:center">
+                Tip: These are the points where the module auto-injects CCs — upgrade-safe and template-agnostic.
+            </div>
+
         </div>
-
-        <!-- RIGHT card -->
-        <div style="flex:1 1 480px;padding:10px;box-sizing:border-box">
-          <div style="background:#fff;border:1px solid #bfdbfe;border-radius:14px;box-shadow:0 6px 18px rgba(14,165,233,.08);padding:18px">
-            <h3 style="margin:0 0 8px;color:#0e7490;font-size:20px">Technical Touchpoints</h3>
-            <ul style="margin:6px 0 0 18px;color:#374151;padding:0;line-height:1.55">
-              <li style="margin:6px 0">Generic composer (<code>mail.compose.message</code>)</li>
-              <li style="margin:6px 0">Invoice send wizard (<code>account.move.send</code>)</li>
-              <li style="margin:6px 0">Sales cancellation wizard</li>
-              <li style="margin:6px 0">Mail notifications pipeline (<code>mail.thread</code>)</li>
-              <li style="margin:6px 0">Picking flow: “next CC” preview &amp; merge before send</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- colored dashed tip -->
-      <div style="margin-top:16px;background:#eff6ff;border:1px dashed #2563eb;border-radius:12px;padding:12px 14px;color:#1e3a8a">
-        Tip: These are the points where the module auto-injects CCs — upgrade-safe and template-agnostic.
-      </div>
-
     </div>
-  </div>
 </section>
 
 
