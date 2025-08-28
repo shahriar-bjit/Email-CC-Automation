@@ -502,80 +502,75 @@
     </div>
 </section>
 
-<!-- INSTALLATION — step-by-step flow with stylish arrows (no tables for cards) -->
+<!-- INSTALLATION — numbered step cards (1 • 2 • 3), Apps-store safe -->
 <section style="padding:56px 0;background:#fff">
-    <div style="max-width:1180px;margin:0 auto;padding:0 18px">
-        <h2 style="font-size:38px;margin:0 0 10px;text-align:center">Installation</h2>
-        <p style="color:#4b5563;margin:0 auto 20px;max-width:820px;text-align:center">
-            Follow the flow from left to right.
-        </p>
+  <div style="max-width:1180px;margin:0 auto;padding:0 18px">
 
-        <!-- ROW: Step 1 → Step 2 → Step 3 with arrow connectors -->
-        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed">
-            <tr valign="middle">
-                <!-- STEP 1 -->
-                <td width="33%">
-                    <div style="background:#eef2ff;border:1px solid #bfdbfe;border-radius:14px; padding:18px;
-                      box-shadow:0 6px 18px rgba(17,24,39,.06); margin:0 10px">
-                        <div style="display:inline-block;background:#6366f1;color:#fff;border-radius:999px;
-                        padding:4px 10px;font-size:12px;font-weight:700">Step 1
-                        </div>
-                        <h3 style="margin:8px 0 6px">Install from Apps</h3>
-                        <p style="color:#4b5563;margin:0">Open Odoo Apps and install <em>Email CC Automation</em> (Odoo
-                            18.0).</p>
-                    </div>
-                </td>
+    <!-- soft framed panel -->
+    <div style="background:#fff;border:1px solid #fed7aa;border-radius:16px;
+                box-shadow:0 10px 28px rgba(17,24,39,.06);padding:26px">
+      <h2 style="font-size:38px;margin:0 0 18px;text-align:center">Installation</h2>
 
-                <!-- ARROW 1 -->
-                <td align="center" width="64">
-                    <!-- bar -->
-                    <div style="display:inline-block;width:44px;height:8px;background:#c7d2fe;border-radius:999px"></div>
-                    <!-- triangle -->
-                    <div style="display:inline-block;width:0;height:0;border-top:10px solid transparent;
-                      border-bottom:10px solid transparent;border-left:12px solid #c7d2fe;margin-left:4px"></div>
-                </td>
+      <!-- 3 numbered cards -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed">
+        <tr valign="top">
+          <!-- STEP 1 -->
+          <td width="33%" style="padding:0 10px">
+            <div style="position:relative;background:#ffffff;border:1px solid #e5e7eb;border-radius:14px;
+                        box-shadow:0 6px 18px rgba(17,24,39,.06);padding:20px 18px;">
+              <span style="position:absolute;top:12px;left:12px;background:#fff;color:#ef4444;
+                           border:2px solid #ef4444;border-radius:6px;font-weight:700;font-size:12px;
+                           padding:2px 7px;line-height:1;display:inline-block;">1</span>
+              <h3 style="margin:8px 0 6px;font-size:20px">Install from Apps</h3>
+              <p style="color:#4b5563;margin:0">Open Odoo Apps and install <em>Email CC Automation</em> (Odoo 18.0).</p>
+            </div>
+          </td>
 
-                <!-- STEP 2 -->
-                <td width="33%">
-                    <div style="background:#ecfdf5;border:1px solid #bbf7d0;border-radius:14px; padding:18px;
-                      box-shadow:0 6px 18px rgba(17,24,39,.06); margin:0 10px">
-                        <div style="display:inline-block;background:#10b981;color:#fff;border-radius:999px;
-                        padding:4px 10px;font-size:12px;font-weight:700">Step 2
-                        </div>
-                        <h3 style="margin:8px 0 6px">Optional libs</h3>
-                        <p style="color:#4b5563;margin:0">If needed by your stack: <code>pip install -r
-                            requirements.txt</code>.</p>
-                    </div>
-                </td>
+          <!-- STEP 2 -->
+          <td width="33%" style="padding:0 10px">
+            <div style="position:relative;background:#ffffff;border:1px solid #e5e7eb;border-radius:14px;
+                        box-shadow:0 6px 18px rgba(17,24,39,.06);padding:20px 18px;">
+              <span style="position:absolute;top:12px;left:12px;background:#fff;color:#ef4444;
+                           border:2px solid #ef4444;border-radius:6px;font-weight:700;font-size:12px;
+                           padding:2px 7px;line-height:1;display:inline-block;">2</span>
+              <h3 style="margin:8px 0 6px;font-size:20px">Optional libs</h3>
+              <p style="color:#4b5563;margin:0">If needed by your stack: <code>pip install -r requirements.txt</code>.</p>
+            </div>
+          </td>
 
-                <!-- ARROW 2 -->
-                <td align="center" width="64">
-                    <div style="display:inline-block;width:44px;height:8px;background:#86efac;border-radius:999px"></div>
-                    <div style="display:inline-block;width:0;height:0;border-top:10px solid transparent;
-                      border-bottom:10px solid transparent;border-left:12px solid #86efac;margin-left:4px"></div>
-                </td>
+          <!-- STEP 3 -->
+          <td width="33%" style="padding:0 10px">
+            <div style="position:relative;background:#ffffff;border:1px solid #e5e7eb;border-radius:14px;
+                        box-shadow:0 6px 18px rgba(17,24,39,.06);padding:20px 18px;">
+              <span style="position:absolute;top:12px;left:12px;background:#fff;color:#ef4444;
+                           border:2px solid #ef4444;border-radius:6px;font-weight:700;font-size:12px;
+                           padding:2px 7px;line-height:1;display:inline-block;">3</span>
+              <h3 style="margin:8px 0 6px;font-size:20px">Email Server</h3>
+              <p style="color:#4b5563;margin:0">Configure and test your Outgoing Email Server.</p>
+            </div>
+          </td>
+        </tr>
+      </table>
 
-                <!-- STEP 3 -->
-                <td width="33%">
-                    <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:14px; padding:18px;
-                      box-shadow:0 6px 18px rgba(17,24,39,.06); margin:0 10px">
-                        <div style="display:inline-block;background:#f59e0b;color:#fff;border-radius:999px;
-                        padding:4px 10px;font-size:12px;font-weight:700">Step 3
-                        </div>
-                        <h3 style="margin:8px 0 6px">Email Server</h3>
-                        <p style="color:#4b5563;margin:0">Configure and test your Outgoing Email Server.</p>
-                    </div>
-                </td>
-            </tr>
-        </table>
+      <!-- connector line under cards -->
+      <div style="max-width:860px;margin:18px auto 0;position:relative;height:18px">
+        <div style="position:absolute;left:0;right:0;top:8px;height:2px;background:#fed7aa"></div>
+        <span style="position:absolute;left:16.6%;top:2px;width:12px;height:12px;border:2px solid #ef4444;
+                     border-radius:4px;background:#fff;display:inline-block"></span>
+        <span style="position:absolute;left:49.9%;top:2px;width:12px;height:12px;border:2px solid #ef4444;
+                     border-radius:4px;background:#fff;display:inline-block"></span>
+        <span style="position:absolute;left:83.2%;top:2px;width:12px;height:12px;border:2px solid #ef4444;
+                     border-radius:4px;background:#fff;display:inline-block"></span>
+      </div>
 
-        <!-- tiny progress line -->
-        <div style="height:6px;border-radius:999px;background:#e5e7eb;margin:18px auto 0;max-width:680px;overflow:hidden">
-            <div style="height:6px;width:100%;
-                  background:linear-gradient(90deg,#6366f1,#10b981,#f59e0b)"></div>
-        </div>
+      <!-- tip -->
+      <div style="margin-top:16px;background:#fff;border:1px dashed #fed7aa;border-radius:12px;padding:12px;color:#7c2d12">
+        <strong>Tip:</strong> After installation, open <em>Settings → General Settings → Email CC Automation</em> to enable and configure the global CC list.
+      </div>
     </div>
+  </div>
 </section>
+
 
 
 <!-- CONFIGURATION — 2 soft cards -->
