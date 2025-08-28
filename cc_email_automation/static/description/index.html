@@ -755,7 +755,7 @@
 </section>
 
 
-<!-- SUPPORT — tear-off ticket CTA (unique, no SVG/emoji, Apps-Store safe) -->
+<!-- SUPPORT — tear-off ticket CTA (sanitizer-proof) -->
 <section style="padding:56px 0;background:#fff">
     <div style="max-width:1180px;margin:0 auto;padding:0 18px">
         <div style="background:#ffffff;border:1px solid #dbe1f1;border-radius:18px;box-shadow:0 16px 48px rgba(30,64,175,.18);position:relative;overflow:hidden">
@@ -787,27 +787,30 @@
             <span style="position:absolute;left:calc(68% - 12px);bottom:16px;width:24px;height:24px;border-radius:50%;
                    background:#fff;border:1px solid #e5e7eb"></span>
 
-            <!-- RIGHT: tear-off coupon -->
-            <div style="display:inline-block;vertical-align:top;width:32%;min-width:240px;padding:28px;text-align:center;
-                  background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff">
-                <div style="font-weight:800;letter-spacing:.3px;margin-bottom:6px;opacity:.95">SUPPORT COUPON</div>
-                <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
-                    border-radius:12px;padding:14px 12px;margin:0 auto 14px;max-width:280px">
-                    <div style="font-size:18px;font-weight:800;margin-bottom:4px">Email Us</div>
-                    <div style="font-size:13px;opacity:.9">Describe your goal &amp; environment — we’ll reply with exact
-                        steps.
+            <!-- RIGHT: coupon (light background + dark text) -->
+            <div style="display:inline-block;vertical-align:top;width:32%;min-width:240px;padding:28px;text-align:center;background:#ffffff">
+                <!-- colored header bar (works even if gradients are stripped) -->
+                <div style="background:#1e3a8a;color:#fff;border-radius:10px;padding:8px 12px;font-weight:800;letter-spacing:.3px;margin-bottom:12px">
+                    SUPPORT COUPON
+                </div>
+
+                <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:14px 12px;margin:0 auto 14px;max-width:280px">
+                    <div style="font-size:18px;font-weight:800;margin-bottom:4px;color:#0f172a">Email Us</div>
+                    <div style="font-size:13px;color:#4b5563">Describe your goal &amp; environment — we’ll reply with
+                        exact steps.
                     </div>
                 </div>
 
                 <a href="mailto:support@example.com"
-                   style="display:inline-block;background:#fff;color:#1e3a8a;text-decoration:none;
-                  padding:12px 22px;border-radius:999px;font-weight:700;border:1px solid #e5e7eb;
-                  box-shadow:0 8px 22px rgba(255,255,255,.25)">Contact Support</a>
+                   style="display:inline-block;background:#1f4ae0;color:#fff;text-decoration:none;
+                  padding:12px 22px;border-radius:999px;font-weight:700;border:1px solid #1e40af;
+                  box-shadow:0 8px 22px rgba(30,64,175,.28)">Contact Support</a>
 
-                <div style="margin-top:10px;font-size:12px;opacity:.9">
-                    or write to <code style="background:rgba(255,255,255,.15);padding:2px 6px;border-radius:6px">support@example.com</code>
+                <div style="margin-top:10px;font-size:12px;color:#6b7280">
+                    or write to <code
+                        style="background:#f3f4f6;padding:2px 6px;border-radius:6px;border:1px solid #e5e7eb">support@example.com</code>
                 </div>
-                <div style="margin-top:12px;font-size:11px;opacity:.8">
+                <div style="margin-top:10px;font-size:11px;color:#6b7280">
                     Replace the email before publishing.
                 </div>
             </div>
