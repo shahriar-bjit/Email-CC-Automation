@@ -9,6 +9,7 @@
     """,
     'author': 'BJIT Limited',
     'depends': ['mail', 'account', 'accountant', 'sale', 'sale_management', 'stock', 'purchase'],
+    'live_test_url': 'https://youtu.be/bN2a8V-RcdI?si=MTYeRW_hZ8qSGqDf',
     'data': [
         'security/ir.model.access.csv',
         'views/inherited_account_move_send_wizard_form.xml',
