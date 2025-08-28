@@ -241,6 +241,61 @@
             padding: 18px;
             box-shadow: var(--shadow)
         }
+
+        /* Container */
+        .screens {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        /* Each screenshot card */
+        .screens .shot {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(17, 24, 39, .08);
+            padding: 14px;
+            margin: 18px 0;
+        }
+
+        /* Small header row above the image (optional badge + label) */
+        .screens .shot-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 4px 6px 10px;
+            color: #374151;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .screens .badge {
+            display: inline-block;
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 999px;
+            padding: 3px 10px;
+            font-size: 12px;
+            color: #374151;
+        }
+
+        /* Image itself */
+        .screens img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            background: #fff;
+        }
+
+        /* Caption under the image */
+        .screens figcaption {
+            margin: 8px 6px 4px;
+            color: #6b7280;
+            font-size: 14px;
+            text-align: center;
+        }
     </style>
 </head>
 <body style="margin:0;padding:0;background:#f7f8fa;color:#111827;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;line-height:1.55">
@@ -488,77 +543,131 @@
 
 
 <!-- SCREENSHOTS (replace image files with your actual ones) -->
-<!-- SCREENSHOTS (10 items) -->
 <section class="section">
-    <div class="wrap">
-        <h2>Screenshots</h2>
-        <div class="gallery" style="margin-top:16px">
-            <figure>
-                <img src="images/cc_settings.png" alt="Global CC settings"/>
-                <figcaption>Global CC configuration in General Settings</figcaption>
-            </figure>
+  <div class="wrap">
+    <h2>Screenshots</h2>
 
-            <figure>
-                <img src="images/credit_note_cc.png" alt="Credit Note send with CC"/>
-                <figcaption>Credit Note – Send popup with auto-filled CC</figcaption>
-            </figure>
+    <div class="screens">
 
-            <figure>
-                <img src="images/invoice_cc.png" alt="Invoice send with partners CC"/>
-                <figcaption>Invoice – global CC partners auto-filled</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/fallback_cc.png" alt="Invoice send fallback CC"/>
-                <figcaption>Invoice – fallback CC (responsible user)</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/order_cc.png" alt="Sales order email CC"/>
-                <figcaption>Sales Order email – CC applied to message</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/quotation_cc.png" alt="Sales order email CC"/>
-                <figcaption>Send Quotation email – CC applied to message</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/cancel_cc.png" alt="Sales order email CC"/>
-                <figcaption>Sales Order Cancel email – CC applied to message</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/po_cc.png" alt="Purchase order compose CC"/>
-                <figcaption>Purchase Order – compose email with CC</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/rfq_cc.png" alt="RFQ compose CC"/>
-                <figcaption>Request for Quotation – compose email with CC</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/shipping_cc1.png" alt="Delivery email CC"/>
-                <figcaption>Delivery Order email – CC auto-applied</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/shipping_cc2.png" alt="Delivery email CC"/>
-                <figcaption>Delivery Order email – CC auto-applied</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/example1.png" alt="Delivery email CC"/>
-                <figcaption>Outgoing mail sent – CC auto-applied</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/example2.png" alt="Delivery email CC"/>
-                <figcaption>Outgoing mail sent – CC auto-applied</figcaption>
-            </figure>
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Settings</span>
+          <span>Global CC configuration</span>
         </div>
+        <img src="images/cc_settings.png" alt="Global CC settings">
+        <figcaption>General Settings → Email CC (enable + choose global CC partners).</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Accounting</span>
+          <span>Credit Note – Send</span>
+        </div>
+        <img src="images/credit_note_cc.png" alt="Credit Note send with CC">
+        <figcaption>Credit Note “Print &amp; Send” popup – CC auto-filled.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Accounting</span>
+          <span>Invoice – CC partners</span>
+        </div>
+        <img src="images/invoice_cc.png" alt="Invoice send with partners CC">
+        <figcaption>Invoice send wizard – global CC partners injected.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Accounting</span>
+          <span>Invoice – fallback CC</span>
+        </div>
+        <img src="images/fallback_cc.png" alt="Invoice send fallback CC">
+        <figcaption>If no global list exists, CC falls back to the responsible user.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Sales</span>
+          <span>Sales Order – email</span>
+        </div>
+        <img src="images/order_cc.png" alt="Sales order email CC">
+        <figcaption>Sales Order email – CC applied automatically before send.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Sales</span>
+          <span>Send Quotation</span>
+        </div>
+        <img src="images/quotation_cc.png" alt="Send Quotation email CC">
+        <figcaption>Quotation email – CC list injected.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Sales</span>
+          <span>Cancel Order</span>
+        </div>
+        <img src="images/cancel_cc.png" alt="Sales order cancel email CC">
+        <figcaption>Cancellation email – CC applied to message.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Purchase</span>
+          <span>Purchase Order</span>
+        </div>
+        <img src="images/po_cc.png" alt="Purchase order compose CC">
+        <figcaption>Purchase Order email – CC partners auto-filled.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Purchase</span>
+          <span>RFQ</span>
+        </div>
+        <img src="images/rfq_cc.png" alt="RFQ compose CC">
+        <figcaption>Request for Quotation email – CC applied.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Inventory</span>
+          <span>Delivery email (1)</span>
+        </div>
+        <img src="images/shipping_cc1.png" alt="Delivery email CC">
+        <figcaption>Delivery Order notification – CC recipients auto-added.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Inventory</span>
+          <span>Delivery email (2)</span>
+        </div>
+        <img src="images/shipping_cc2.png" alt="Delivery email CC (alt)">
+        <figcaption>Another delivery send example with CC.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Mail</span>
+          <span>Outgoing mail (example 1)</span>
+        </div>
+        <img src="images/example1.png" alt="Outgoing mail CC example 1">
+        <figcaption>Outgoing mail showing CC auto-applied.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-header">
+          <span class="badge">Mail</span>
+          <span>Outgoing mail (example 2)</span>
+        </div>
+        <img src="images/example2.png" alt="Outgoing mail CC example 2">
+        <figcaption>Another outgoing message confirming CC injection.</figcaption>
+      </figure>
+
     </div>
+  </div>
 </section>
 
 
