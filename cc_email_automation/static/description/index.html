@@ -620,89 +620,62 @@
 </section>
 
 
-<!-- COMPATIBILITY & NOTES — Gradient Hex Badges (unique; inline SVG only) -->
+<!-- COMPATIBILITY & NOTES — Sticky-note tiles with folded corner (no SVG/emoji) -->
 <section style="padding:56px 0;background:#fff">
     <div style="max-width:1180px;margin:0 auto;padding:0 18px">
-        <h2 style="font-size:38px;margin:0 0 20px;text-align:center">Compatibility &amp; Notes</h2>
+        <h2 style="font-size:38px;margin:0 0 22px;text-align:center">Compatibility &amp; Notes</h2>
 
         <div style="font-size:0;text-align:center">
 
-            <!-- BADGE 1 -->
+            <!-- Tile 1: Supported Versions -->
             <div style="display:inline-block;vertical-align:top;width:33.33%;min-width:260px;
                   padding:10px;box-sizing:border-box;font-size:16px">
-                <div style="display:inline-block;padding:10px;border-radius:14px;transition:.2s;
-                    box-shadow:0 10px 24px rgba(99,102,241,.18)">
-                    <svg viewBox="0 0 100 110" width="130" height="130" style="display:block;margin:0 auto">
-                        <!-- hex -->
-                        <defs>
-                            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#6366f1"/>
-                                <stop offset="1" stop-color="#a78bfa"/>
-                            </linearGradient>
-                        </defs>
-                        <polygon points="50,5 93,30 93,80 50,105 7,80 7,30"
-                                 fill="url(#g1)" stroke="#c7d2fe" stroke-width="2"/>
-                        <!-- check icon -->
-                        <path d="M30 58 l12 12 28 -28" fill="none" stroke="#ffffff"
-                              stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div style="margin-top:10px">
-                    <div style="font-weight:800;font-size:22px">Odoo 18.0</div>
+                <div style="position:relative;border-radius:16px;border:1px solid #c7d2fe;
+                    background:
+                      radial-gradient(circle at 12px 12px, rgba(99,102,241,.06) 2px, transparent 3px) 0 0/22px 22px,
+                      linear-gradient(180deg,#ffffff 0%,#eef2ff 100%);
+                    box-shadow:0 10px 24px rgba(99,102,241,.14);
+                    padding:20px 18px;text-align:center">
+                    <!-- folded corner -->
+                    <span style="position:absolute;top:0;right:0;width:0;height:0;
+                       border-top:22px solid #6366f1;border-left:22px solid transparent"></span>
+
+                    <div style="font-weight:800;font-size:26px;margin:6px 0 6px">Odoo 18.0</div>
                     <div style="color:#4b5563">Supported version</div>
                 </div>
             </div>
 
-            <!-- BADGE 2 -->
+            <!-- Tile 2: Multi-company -->
             <div style="display:inline-block;vertical-align:top;width:33.33%;min-width:260px;
                   padding:10px;box-sizing:border-box;font-size:16px">
-                <div style="display:inline-block;padding:10px;border-radius:14px;transition:.2s;
-                    box-shadow:0 10px 24px rgba(14,165,233,.18)">
-                    <svg viewBox="0 0 100 110" width="130" height="130" style="display:block;margin:0 auto">
-                        <defs>
-                            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#0ea5e9"/>
-                                <stop offset="1" stop-color="#22c55e"/>
-                            </linearGradient>
-                        </defs>
-                        <polygon points="50,5 93,30 93,80 50,105 7,80 7,30"
-                                 fill="url(#g2)" stroke="#99f6e4" stroke-width="2"/>
-                        <!-- building icon -->
-                        <path d="M30 80 V40 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 v40
-                     M40 52 h8 M52 52 h8 M40 64 h8 M52 64 h8"
-                              fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div style="margin-top:10px">
-                    <div style="font-weight:800;font-size:22px">Global behavior</div>
+                <div style="position:relative;border-radius:16px;border:1px solid #bae6fd;
+                    background:
+                      radial-gradient(circle at 12px 12px, rgba(14,165,233,.08) 2px, transparent 3px) 0 0/22px 22px,
+                      linear-gradient(180deg,#ffffff 0%,#ecfeff 100%);
+                    box-shadow:0 10px 24px rgba(14,165,233,.14);
+                    padding:20px 18px;text-align:center">
+          <span style="position:absolute;top:0;right:0;width:0;height:0;
+                       border-top:22px solid #0ea5e9;border-left:22px solid transparent"></span>
+
+                    <div style="font-weight:800;font-size:26px;margin:6px 0 6px">Global behavior</div>
                     <div style="color:#4b5563">Multi-company ready</div>
                 </div>
             </div>
 
-            <!-- BADGE 3 -->
+            <!-- Tile 3: Security -->
             <div style="display:inline-block;vertical-align:top;width:33.33%;min-width:260px;
                   padding:10px;box-sizing:border-box;font-size:16px">
-                <div style="display:inline-block;padding:10px;border-radius:14px;transition:.2s;
-                    box-shadow:0 10px 24px rgba(245,158,11,.20)">
-                    <svg viewBox="0 0 100 110" width="130" height="130" style="display:block;margin:0 auto">
-                        <defs>
-                            <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#f59e0b"/>
-                                <stop offset="1" stop-color="#f97316"/>
-                            </linearGradient>
-                        </defs>
-                        <polygon points="50,5 93,30 93,80 50,105 7,80 7,30"
-                                 fill="url(#g3)" stroke="#fde68a" stroke-width="2"/>
-                        <!-- lock icon -->
-                        <path d="M34 52 V46 a16 16 0 0 1 32 0 v6
-                     M28 52 h44 a6 6 0 0 1 6 6 v22 a6 6 0 0 1 -6 6 H28 a6 6 0 0 1 -6 -6 V58 a6 6 0 0 1 6 -6"
-                              fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div style="margin-top:10px">
-                    <div style="font-weight:800;font-size:22px">Admin-controlled</div>
-                    <div style="color:#4b5563">Only administrators can edit config</div>
+                <div style="position:relative;border-radius:16px;border:1px solid #fde68a;
+                    background:
+                      radial-gradient(circle at 12px 12px, rgba(245,158,11,.10) 2px, transparent 3px) 0 0/22px 22px,
+                      linear-gradient(180deg,#ffffff 0%,#fff7ed 100%);
+                    box-shadow:0 10px 24px rgba(245,158,11,.16);
+                    padding:20px 18px;text-align:center">
+          <span style="position:absolute;top:0;right:0;width:0;height:0;
+                       border-top:22px solid #f59e0b;border-left:22px solid transparent"></span>
+
+                    <div style="font-weight:800;font-size:26px;margin:6px 0 6px">Admin-controlled</div>
+                    <div style="color:#4b5563">Only administrators can edit the global CC config</div>
                 </div>
             </div>
 
