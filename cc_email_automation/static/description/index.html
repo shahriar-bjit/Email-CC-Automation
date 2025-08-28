@@ -684,60 +684,71 @@
 </section>
 
 
-<!-- ROADMAP — diamond milestones + dashed connector (no SVG/emoji) -->
+<!-- ROADMAP — aligned nodes + clear status chips + legend (inline CSS only) -->
 <section style="padding:56px 0;background:#f7f8fa">
     <div style="max-width:1180px;margin:0 auto;padding:0 18px">
-        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 12px 34px rgba(17,24,39,.08);padding:28px">
-            <h2 style="font-size:38px;margin:0 0 20px;text-align:center">Roadmap</h2>
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;
+                box-shadow:0 12px 34px rgba(17,24,39,.08);padding:28px">
+            <h2 style="font-size:38px;margin:0 0 22px;text-align:center">Roadmap</h2>
 
-            <div style="position:relative;max-width:980px;margin:0 auto;padding:32px 0 10px;text-align:center;font-size:0">
-                <!-- dashed connector -->
-                <div style="position:absolute;left:4%;right:4%;top:56px;height:2px;
-                    background-image:repeating-linear-gradient(90deg,#cbd5e1 0 16px,transparent 16px 28px);"></div>
+            <div style="position:relative;max-width:980px;margin:0 auto;padding-top:72px">
+                <!-- dashed spine -->
+                <div style="position:absolute;left:4%;right:4%;top:48px;height:2px;
+                    background-image:repeating-linear-gradient(90deg,#cbd5e1 0 16px,transparent 16px 28px);
+                    border-radius:999px"></div>
 
-                <!-- step -->
-                <div style="display:inline-block;width:33.33%;min-width:240px;vertical-align:top;font-size:16px">
-                    <div style="display:inline-block;position:relative;transform:rotate(45deg);width:58px;height:58px;
-                      background:linear-gradient(135deg,#7c3aed,#ec4899);border-radius:14px;
-                      box-shadow:0 12px 26px rgba(124,58,237,.35);margin-bottom:16px">
-            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-                         transform:rotate(-45deg);color:#fff;font-weight:900">1</span>
+                <div style="font-size:0;text-align:center">
+                    <!-- STEP 1 -->
+                    <div style="display:inline-block;width:33.33%;min-width:240px;vertical-align:top;font-size:16px;position:relative;padding-top:8px">
+                        <!-- status chip (above spine) -->
+                        <span style="position:absolute;left:50%;top:14px;transform:translateX(-50%);
+                         background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe;
+                         padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700">Planned</span>
+                        <!-- node on spine -->
+                        <span style="position:absolute;left:50%;top:44px;transform:translateX(-50%);
+                         width:10px;height:10px;border-radius:50%;background:#7c3aed;border:2px solid #f5f3ff"></span>
+                        <!-- connector -->
+                        <span style="position:absolute;left:calc(50% - 1px);top:54px;width:2px;height:22px;background:#e9d5ff"></span>
+
+                        <h3 style="margin:10px 0 6px;font-size:26px">Template-level CC</h3>
+                        <p style="color:#4b5563;margin:0">Priority over global configuration.</p>
                     </div>
-                    <div style="display:inline-block;background:#f5f3ff;color:#6d28d9;border-radius:999px;
-                      padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:6px">Planned
+
+                    <!-- STEP 2 -->
+                    <div style="display:inline-block;width:33.33%;min-width:240px;vertical-align:top;font-size:16px;position:relative;padding-top:8px">
+            <span style="position:absolute;left:50%;top:14px;transform:translateX(-50%);
+                         background:#ecfeff;color:#0e7490;border:1px solid #bae6fd;
+                         padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700">Next</span>
+                        <span style="position:absolute;left:50%;top:44px;transform:translateX(-50%);
+                         width:10px;height:10px;border-radius:50%;background:#0ea5e9;border:2px solid #ecfeff"></span>
+                        <span style="position:absolute;left:calc(50% - 1px);top:54px;width:2px;height:22px;background:#bae6fd"></span>
+
+                        <h3 style="margin:10px 0 6px;font-size:26px">Per-company Rules</h3>
+                        <p style="color:#4b5563;margin:0">Clear precedence across companies.</p>
                     </div>
-                    <h3 style="margin:6px 0 6px">Template-level CC</h3>
-                    <p style="color:#4b5563;margin:0">Priority over global configuration.</p>
+
+                    <!-- STEP 3 -->
+                    <div style="display:inline-block;width:33.33%;min-width:240px;vertical-align:top;font-size:16px;position:relative;padding-top:8px">
+            <span style="position:absolute;left:50%;top:14px;transform:translateX(-50%);
+                         background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;
+                         padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700">Idea</span>
+                        <span style="position:absolute;left:50%;top:44px;transform:translateX(-50%);
+                         width:10px;height:10px;border-radius:50%;background:#f59e0b;border:2px solid #fff7ed"></span>
+                        <span style="position:absolute;left:calc(50% - 1px);top:54px;width:2px;height:22px;background:#fed7aa"></span>
+
+                        <h3 style="margin:10px 0 6px;font-size:26px">BCC Parity</h3>
+                        <p style="color:#4b5563;margin:0">Mirror CC automation to BCC field.</p>
+                    </div>
                 </div>
 
-                <!-- step -->
-                <div style="display:inline-block;width:33.33%;min-width:240px;vertical-align:top;font-size:16px">
-                    <div style="display:inline-block;position:relative;transform:rotate(45deg);width:58px;height:58px;
-                      background:linear-gradient(135deg,#0ea5e9,#10b981);border-radius:14px;
-                      box-shadow:0 12px 26px rgba(16,185,129,.35);margin-bottom:16px">
-            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-                         transform:rotate(-45deg);color:#fff;font-weight:900">2</span>
-                    </div>
-                    <div style="display:inline-block;background:#ecfeff;color:#0e7490;border-radius:999px;
-                      padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:6px">Next
-                    </div>
-                    <h3 style="margin:6px 0 6px">Per-company Rules</h3>
-                    <p style="color:#4b5563;margin:0">Clear precedence across companies.</p>
-                </div>
-
-                <!-- step -->
-                <div style="display:inline-block;width:33.33%;min-width:240px;vertical-align:top;font-size:16px">
-                    <div style="display:inline-block;position:relative;transform:rotate(45deg);width:58px;height:58px;
-                      background:linear-gradient(135deg,#f97316,#ef4444);border-radius:14px;
-                      box-shadow:0 12px 26px rgba(239,68,68,.35);margin-bottom:16px">
-            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-                         transform:rotate(-45deg);color:#fff;font-weight:900">3</span>
-                    </div>
-                    <div style="display:inline-block;background:#fff7ed;color:#9a3412;border-radius:999px;
-                      padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:6px">Idea
-                    </div>
-                    <h3 style="margin:6px 0 6px">BCC Parity</h3>
-                    <p style="color:#4b5563;margin:0">Mirror CC automation to BCC field.</p>
+                <!-- legend -->
+                <div style="margin:18px auto 0;max-width:860px;background:#fff;border:1px dashed #e5e7eb;
+                    border-radius:12px;padding:12px 14px;color:#4b5563">
+                    <strong>Status legend:</strong>
+                    <span style="display:inline-block;margin-left:8px;background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:700">Planned</span>
+                    <span style="display:inline-block;margin-left:6px;background:#ecfeff;color:#0e7490;border:1px solid #bae6fd;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:700">Next</span>
+                    <span style="display:inline-block;margin-left:6px;background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:700">Idea</span>
+                    <span style="opacity:.85;margin-left:6px">— where each item currently sits on the timeline.</span>
                 </div>
             </div>
         </div>
