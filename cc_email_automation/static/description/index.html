@@ -4,352 +4,78 @@
     <meta charset="utf-8"/>
     <title>Email CC Automation – Odoo 18</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- Odoo Apps Store note:
-         - No external fonts/CDNs used.
-         - All images must live under static/description/images/. -->
-<!--    <style>-->
-<!--        :root {-->
-<!--            &#45;&#45;bg: #f7f8fa;-->
-<!--            &#45;&#45;fg: #111827;-->
-<!--            &#45;&#45;muted: #4b5563;-->
-<!--            &#45;&#45;brand: #2563eb;-->
-<!--            &#45;&#45;brand-2: #1e40af;-->
-<!--            &#45;&#45;card: #ffffff;-->
-<!--            &#45;&#45;ok: #059669;-->
-<!--            &#45;&#45;warn: #b45309;-->
-<!--            &#45;&#45;chip: #eef2ff;-->
-<!--            &#45;&#45;border: #e5e7eb;-->
-<!--            &#45;&#45;shadow: 0 6px 18px rgba(17, 24, 39, .08);-->
-<!--            &#45;&#45;radius: 14px;-->
-<!--        }-->
+    <style>
+        /* ---- Screenshots, vendor-bid style ---- */
+        .screenshots {
+            padding: 56px 0;
+            background: #f7f8fa;
+        }
 
-<!--        * {-->
-<!--            box-sizing: border-box-->
-<!--        }-->
+        .screenshots .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 18px;
+        }
 
-<!--        html, body {-->
-<!--            margin: 0;-->
-<!--            padding: 0;-->
-<!--            background: var(&#45;&#45;bg);-->
-<!--            color: var(&#45;&#45;fg);-->
-<!--            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;-->
-<!--            line-height: 1.55-->
-<!--        }-->
+        .sc-title {
+            font-size: 38px;
+            margin: 0 0 18px;
+            text-align: center;
+        }
 
-<!--        a {-->
-<!--            color: var(&#45;&#45;brand);-->
-<!--            text-decoration: none-->
-<!--        }-->
+        .sc-grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: 1fr;
+        }
 
-<!--        a:hover {-->
-<!--            text-decoration: underline-->
-<!--        }-->
+        /* Two-up on large screens, single on small – fully centered */
+        @media (min-width: 980px) {
+            .sc-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
 
-<!--        .wrap {-->
-<!--            max-width: 1180px;-->
-<!--            margin: 0 auto;-->
-<!--            padding: 0 18px-->
-<!--        }-->
+        .sc-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(17, 24, 39, .08);
+            padding: 14px;
+        }
 
-<!--        .section {-->
-<!--            padding: 72px 0-->
-<!--        }-->
+        /* The frame prevents overflow while keeping the image crisp */
+        .sc-frame {
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+        }
 
-<!--        .section h2 {-->
-<!--            font-size: 38px;-->
-<!--            margin: 0 0 18px-->
-<!--        }-->
+        /* Make absolutely sure images never “cross” the page */
+        .sc-card img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
 
-<!--        .muted {-->
-<!--            color: var(&#45;&#45;muted)-->
-<!--        }-->
+        /* Optional: if your screenshots are extremely tall, contain them
+           without distortion (uncomment to cap height)
+        .sc-card img { max-height: 780px; object-fit: contain; }
+        */
 
-<!--        .btn {-->
-<!--            display: inline-block;-->
-<!--            background: linear-gradient(90deg, var(&#45;&#45;brand), var(&#45;&#45;brand-2));-->
-<!--            color: #fff;-->
-<!--            padding: 12px 18px;-->
-<!--            border-radius: 999px;-->
-<!--            font-weight: 600;-->
-<!--            box-shadow: var(&#45;&#45;shadow)-->
-<!--        }-->
+        .sc-cap {
+            text-align: center;
+            color: #4b5563;
+            font-size: 14px;
+            margin-top: 8px;
+        }
 
-<!--        .hero {-->
-<!--            position: relative;-->
-<!--            overflow: hidden;-->
-<!--            background: linear-gradient(135deg, var(&#45;&#45;brand), var(&#45;&#45;brand-2));-->
-<!--            color: #fff-->
-<!--        }-->
-
-<!--        .hero .inner {-->
-<!--            padding: 84px 0;-->
-<!--            text-align: center-->
-<!--        }-->
-
-<!--        .hero .title {-->
-<!--            font-size: 48px;-->
-<!--            margin: 12px 0 10px-->
-<!--        }-->
-
-<!--        .hero p {-->
-<!--            font-size: 18px;-->
-<!--            opacity: .95;-->
-<!--            max-width: 840px;-->
-<!--            margin: 0 auto-->
-<!--        }-->
-
-<!--        .badges {-->
-<!--            display: flex;-->
-<!--            flex-wrap: wrap;-->
-<!--            gap: 10px;-->
-<!--            justify-content: center;-->
-<!--            margin-top: 18px-->
-<!--        }-->
-
-<!--        .badge {-->
-<!--            background: rgba(255, 255, 255, .15);-->
-<!--            border: 1px solid rgba(255, 255, 255, .25);-->
-<!--            padding: 6px 10px;-->
-<!--            border-radius: 999px;-->
-<!--            font-size: 13px-->
-<!--        }-->
-
-<!--        /* Cards */-->
-<!--        .grid {-->
-<!--            display: grid;-->
-<!--            gap: 18px-->
-<!--        }-->
-
-<!--        .cards-3 {-->
-<!--            grid-template-columns:repeat(3, minmax(0, 1fr))-->
-<!--        }-->
-
-<!--        .cards-2 {-->
-<!--            grid-template-columns:repeat(2, minmax(0, 1fr))-->
-<!--        }-->
-
-<!--        @media (max-width: 980px) {-->
-<!--            .cards-3, .cards-2 {-->
-<!--                grid-template-columns:1fr-->
-<!--            }-->
-<!--        }-->
-
-<!--        .card {-->
-<!--            background: var(&#45;&#45;card);-->
-<!--            border: 1px solid var(&#45;&#45;border);-->
-<!--            border-radius: var(&#45;&#45;radius);-->
-<!--            box-shadow: var(&#45;&#45;shadow);-->
-<!--            padding: 18px-->
-<!--        }-->
-
-<!--        .card h3 {-->
-<!--            margin: 4px 0 8px;-->
-<!--            font-size: 20px-->
-<!--        }-->
-
-<!--        .card p, .card li {-->
-<!--            color: var(&#45;&#45;muted)-->
-<!--        }-->
-
-<!--        /* Feature list */-->
-<!--        .check {-->
-<!--            display: inline-block;-->
-<!--            margin-right: 8px;-->
-<!--            background: var(&#45;&#45;ok);-->
-<!--            color: #fff;-->
-<!--            border-radius: 4px;-->
-<!--            font-size: 11px;-->
-<!--            padding: 2px 6px-->
-<!--        }-->
-
-<!--        .warn {-->
-<!--            display: inline-block;-->
-<!--            margin-right: 8px;-->
-<!--            background: var(&#45;&#45;warn);-->
-<!--            color: #fff;-->
-<!--            border-radius: 4px;-->
-<!--            font-size: 11px;-->
-<!--            padding: 2px 6px-->
-<!--        }-->
-
-<!--        /* Screenshot gallery */-->
-<!--        .gallery {-->
-<!--            display: grid;-->
-<!--            gap: 22px;-->
-<!--            grid-template-columns:repeat(2, minmax(0, 1fr))-->
-<!--        }-->
-
-<!--        @media (max-width: 980px) {-->
-<!--            .gallery {-->
-<!--                grid-template-columns:1fr-->
-<!--            }-->
-<!--        }-->
-
-<!--        figure {-->
-<!--            margin: 0;-->
-<!--            background: #fff;-->
-<!--            border: 1px solid var(&#45;&#45;border);-->
-<!--            border-radius: 12px;-->
-<!--            box-shadow: var(&#45;&#45;shadow);-->
-<!--            overflow: hidden-->
-<!--        }-->
-
-<!--        figure img {-->
-<!--            display: block;-->
-<!--            width: 100%;-->
-<!--            height: auto-->
-<!--        }-->
-
-<!--        figure figcaption {-->
-<!--            padding: 10px 12px;-->
-<!--            font-size: 14px;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--            border-top: 1px solid var(&#45;&#45;border)-->
-<!--        }-->
-
-<!--        /* Table */-->
-<!--        table {-->
-<!--            width: 100%;-->
-<!--            border-collapse: separate;-->
-<!--            border-spacing: 0;-->
-<!--            overflow: hidden;-->
-<!--            border-radius: 12px;-->
-<!--            border: 1px solid var(&#45;&#45;border);-->
-<!--            background: #fff;-->
-<!--            box-shadow: var(&#45;&#45;shadow)-->
-<!--        }-->
-
-<!--        th, td {-->
-<!--            padding: 12px 14px;-->
-<!--            text-align: left;-->
-<!--            border-bottom: 1px solid var(&#45;&#45;border)-->
-<!--        }-->
-
-<!--        th {-->
-<!--            background: #f9fafb-->
-<!--        }-->
-
-<!--        tr:last-child td {-->
-<!--            border-bottom: none-->
-<!--        }-->
-
-<!--        /* Footer callout */-->
-<!--        .callout {-->
-<!--            background: #fff;-->
-<!--            border: 1px dashed var(&#45;&#45;border);-->
-<!--            border-radius: 12px;-->
-<!--            padding: 18px;-->
-<!--            box-shadow: var(&#45;&#45;shadow)-->
-<!--        }-->
-
-<!--        /* Container */-->
-<!--        .screens {-->
-<!--            max-width: 980px;-->
-<!--            margin: 0 auto;-->
-<!--        }-->
-
-<!--        /* Each screenshot card */-->
-<!--        .screens .shot {-->
-<!--            background: #fff;-->
-<!--            border: 1px solid #e5e7eb;-->
-<!--            border-radius: 16px;-->
-<!--            box-shadow: 0 8px 24px rgba(17, 24, 39, .08);-->
-<!--            padding: 14px;-->
-<!--            margin: 18px 0;-->
-<!--        }-->
-
-<!--        /* Small header row above the image (optional badge + label) */-->
-<!--        .screens .shot-header {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 10px;-->
-<!--            margin: 4px 6px 10px;-->
-<!--            color: #374151;-->
-<!--            font-weight: 600;-->
-<!--            font-size: 15px;-->
-<!--        }-->
-
-<!--        .screens .badge {-->
-<!--            display: inline-block;-->
-<!--            background: #f3f4f6;-->
-<!--            border: 1px solid #e5e7eb;-->
-<!--            border-radius: 999px;-->
-<!--            padding: 3px 10px;-->
-<!--            font-size: 12px;-->
-<!--            color: #374151;-->
-<!--        }-->
-
-<!--        /* Image itself */-->
-<!--        .screens img {-->
-<!--            width: 100%;-->
-<!--            height: auto;-->
-<!--            display: block;-->
-<!--            border-radius: 10px;-->
-<!--            border: 1px solid #e5e7eb;-->
-<!--            background: #fff;-->
-<!--        }-->
-
-<!--        /* Caption under the image */-->
-<!--        .screens figcaption {-->
-<!--            margin: 8px 6px 4px;-->
-<!--            color: #6b7280;-->
-<!--            font-size: 14px;-->
-<!--            text-align: center;-->
-<!--        }-->
-
-<!--        /* Screenshots: centered, capped, carded */-->
-<!--        .screens {-->
-<!--            max-width: 1100px;-->
-<!--            margin: 0 auto-->
-<!--        }-->
-
-<!--        .screens .shot {-->
-<!--            background: #fff;-->
-<!--            border: 1px solid #e5e7eb;-->
-<!--            border-radius: 16px;-->
-<!--            box-shadow: 0 8px 24px rgba(17, 24, 39, .08);-->
-<!--            padding: 14px;-->
-<!--            margin: 18px 0-->
-<!--        }-->
-
-<!--        .screens .shot-header {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 10px;-->
-<!--            margin: 4px 6px 10px;-->
-<!--            color: #374151;-->
-<!--            font-weight: 600;-->
-<!--            font-size: 15px-->
-<!--        }-->
-
-<!--        .screens .badge {-->
-<!--            display: inline-block;-->
-<!--            background: #f3f4f6;-->
-<!--            border: 1px solid #e5e7eb;-->
-<!--            border-radius: 999px;-->
-<!--            padding: 3px 10px;-->
-<!--            font-size: 12px;-->
-<!--            color: #374151-->
-<!--        }-->
-
-<!--        .screens img {-->
-<!--            width: 100%;-->
-<!--            max-width: 100%;-->
-<!--            height: auto;-->
-<!--            display: block;-->
-<!--            border-radius: 10px;-->
-<!--            border: 1px solid #e5e7eb;-->
-<!--            background: #fff-->
-<!--        }-->
-
-<!--        .screens figcaption {-->
-<!--            margin: 8px 6px 4px;-->
-<!--            color: #6b7280;-->
-<!--            font-size: 14px;-->
-<!--            text-align: center-->
-<!--        }-->
-
-<!--    </style>-->
+        /* A little breathing room under the whole gallery */
+        .screenshots .wrap .sc-grid {
+            margin-top: 16px;
+        }
+    </style>
 </head>
 <body style="margin:0;padding:0;background:#f7f8fa;color:#111827;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;line-height:1.55">
 
@@ -596,90 +322,114 @@
 
 
 <!-- SCREENSHOTS (replace image files with your actual ones) -->
-<section class="section">
+<section class="screenshots">
     <div class="wrap">
-        <h2>Screenshots</h2>
+        <h2 class="sc-title">Screenshots</h2>
 
-        <div class="screens">
-
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Settings</span><span>Global CC configuration</span></div>
-                <img src="images/cc_settings.png" alt="Global CC settings">
-                <figcaption>General Settings → Email CC (enable + choose global CC partners).</figcaption>
+        <div class="sc-grid">
+            <!-- 1 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/cc_settings.png" alt="Global CC settings">
+                </div>
+                <figcaption class="sc-cap">Global CC configuration in General Settings</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Accounting</span><span>Credit Note – Send</span></div>
-                <img src="images/credit_note_cc.png" alt="Credit Note send with CC">
-                <figcaption>Credit Note “Print &amp; Send” popup – CC auto-filled.</figcaption>
+            <!-- 2 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/credit_note_cc.png" alt="Credit Note send with CC">
+                </div>
+                <figcaption class="sc-cap">Credit Note — send popup with auto-filled CC</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Accounting</span><span>Invoice – CC partners</span></div>
-                <img src="images/invoice_cc.png" alt="Invoice send with partners CC">
-                <figcaption>Invoice send wizard – global CC partners injected.</figcaption>
+            <!-- 3 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/invoice_cc.png" alt="Invoice send with global partners CC">
+                </div>
+                <figcaption class="sc-cap">Invoice — global CC partners auto-filled</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Accounting</span><span>Invoice – fallback CC</span></div>
-                <img src="images/fallback_cc.png" alt="Invoice send fallback CC">
-                <figcaption>If no global list exists, CC falls back to the responsible user.</figcaption>
+            <!-- 4 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/fallback_cc.png" alt="Invoice send fallback CC">
+                </div>
+                <figcaption class="sc-cap">Invoice — fallback CC (responsible user)</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Sales</span><span>Sales Order – email</span></div>
-                <img src="images/order_cc.png" alt="Sales order email CC">
-                <figcaption>Sales Order email – CC applied automatically before send.</figcaption>
+            <!-- 5 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/order_cc.png" alt="Sales order email CC">
+                </div>
+                <figcaption class="sc-cap">Sales Order email — CC applied to message</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Sales</span><span>Send Quotation</span></div>
-                <img src="images/quotation_cc.png" alt="Send Quotation email CC">
-                <figcaption>Quotation email – CC list injected.</figcaption>
+            <!-- 6 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/quotation_cc.png" alt="Quotation email CC">
+                </div>
+                <figcaption class="sc-cap">Quotation email — CC applied to message</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Sales</span><span>Cancel Order</span></div>
-                <img src="images/cancel_cc.png" alt="Sales order cancel email CC">
-                <figcaption>Cancellation email – CC applied to message.</figcaption>
+            <!-- 7 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/cancel_cc.png" alt="Sales order cancel email CC">
+                </div>
+                <figcaption class="sc-cap">Sales Order cancellation — CC applied</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Purchase</span><span>Purchase Order</span></div>
-                <img src="images/po_cc.png" alt="Purchase order compose CC">
-                <figcaption>Purchase Order email – CC partners auto-filled.</figcaption>
+            <!-- 8 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/po_cc.png" alt="Purchase order compose CC">
+                </div>
+                <figcaption class="sc-cap">Purchase Order — compose email with CC</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Purchase</span><span>RFQ</span></div>
-                <img src="images/rfq_cc.png" alt="RFQ compose CC">
-                <figcaption>Request for Quotation email – CC applied.</figcaption>
+            <!-- 9 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/rfq_cc.png" alt="RFQ compose CC">
+                </div>
+                <figcaption class="sc-cap">Request for Quotation — compose email with CC</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Inventory</span><span>Delivery email (1)</span></div>
-                <img src="images/shipping_cc1.png" alt="Delivery email CC">
-                <figcaption>Delivery Order notification – CC recipients auto-added.</figcaption>
+            <!-- 10 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/shipping_cc1.png" alt="Delivery email CC 1">
+                </div>
+                <figcaption class="sc-cap">Delivery Order email — CC auto-applied</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Inventory</span><span>Delivery email (2)</span></div>
-                <img src="images/shipping_cc2.png" alt="Delivery email CC (alt)">
-                <figcaption>Another delivery send example with CC.</figcaption>
+            <!-- 11 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/shipping_cc2.png" alt="Delivery email CC 2">
+                </div>
+                <figcaption class="sc-cap">Delivery notification — CC auto-applied</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Mail</span><span>Outgoing mail (example 1)</span></div>
-                <img src="images/example1.png" alt="Outgoing mail CC example 1">
-                <figcaption>Outgoing mail showing CC auto-applied.</figcaption>
+            <!-- 12 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/example1.png" alt="Outgoing mail CC example 1">
+                </div>
+                <figcaption class="sc-cap">Outgoing mail — CC list applied</figcaption>
             </figure>
 
-            <figure class="shot">
-                <div class="shot-header"><span class="badge">Mail</span><span>Outgoing mail (example 2)</span></div>
-                <img src="images/example2.png" alt="Outgoing mail CC example 2">
-                <figcaption>Another outgoing message confirming CC injection.</figcaption>
+            <!-- 13 -->
+            <figure class="sc-card">
+                <div class="sc-frame">
+                    <img src="images/example2.png" alt="Outgoing mail CC example 2">
+                </div>
+                <figcaption class="sc-cap">Outgoing mail — CC list applied</figcaption>
             </figure>
-
         </div>
     </div>
 </section>
