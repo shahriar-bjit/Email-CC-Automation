@@ -9,7 +9,7 @@
     """,
     'author': 'BJIT Limited',
     'depends': ['mail', 'account', 'accountant', 'sale', 'sale_management', 'stock', 'purchase'],
-    'live_test_url': 'https://myodootest.space/app/preview',
+    'live_test_url': 'https://email-cc.app-odoo.bjitgroup.org/app/preview',
     'data': [
         'security/ir.model.access.csv',
         'views/inherited_account_move_send_wizard_form.xml',
